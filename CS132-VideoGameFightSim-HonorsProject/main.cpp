@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
 
-    // Program end sequence or OS independence. 
+    // OS independent program termination sequence. 
 #ifdef _WIN32
     cout << endl;
     system("pause");
