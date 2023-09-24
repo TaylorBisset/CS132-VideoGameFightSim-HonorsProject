@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.hpp" />
+    <ClInclude Include="armor_manager.hpp" />
     <ClInclude Include="character.hpp" />
     <ClInclude Include="enemy_non_player_character.hpp" />
     <ClInclude Include="entity.hpp" />
