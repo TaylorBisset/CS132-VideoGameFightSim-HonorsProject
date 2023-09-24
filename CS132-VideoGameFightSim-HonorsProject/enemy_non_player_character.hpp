@@ -25,6 +25,11 @@ public:
         // Enemy NPC properties
     }
 
+    int getLoot()
+        const {
+        return loot;
+    }
+
 private:
     int loot;
 };

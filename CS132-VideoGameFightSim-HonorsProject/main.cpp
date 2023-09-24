@@ -9,8 +9,11 @@
 #include <iostream>
 
 #include "entity.hpp"
+
 #include "character.hpp"
 #include "player_character.hpp"
+#include "non_player_character.hpp"
+#include "enemy_non_player_character.hpp"
 
 int main()
 {

@@ -23,6 +23,9 @@ public:
         // NPC properties
     }
 
+    int getAttitude() 
+        const { return attitude; }
+
 private:
     int attitude; // friendly or enemy
 };
