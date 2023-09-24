@@ -8,7 +8,19 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    // Program end sequence or OS independence. 
+#ifdef _WIN32
+    cout << endl;
+    system("pause");
+#else
+    cout << endl;
+    cout << "Press any key to continue . . . ";
+    cin.get();
+#endif
+    return 0;
 }
