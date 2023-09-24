@@ -14,6 +14,7 @@ class Entity
 {
 public:
     Entity(const string& name, const string& description) : 
+        
         name(name), description(description)
     {
         // Entity properties
