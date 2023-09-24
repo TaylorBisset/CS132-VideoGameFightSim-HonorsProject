@@ -9,6 +9,7 @@
 #include <iostream>
 
 #include "entity.hpp"
+#include "character.hpp"
 
 int main()
 {
