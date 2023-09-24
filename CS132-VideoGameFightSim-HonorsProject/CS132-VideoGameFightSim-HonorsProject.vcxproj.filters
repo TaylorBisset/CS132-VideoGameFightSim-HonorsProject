@@ -32,5 +32,8 @@
     <ClInclude Include="non_player_character.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="enemy_non_player_character.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
