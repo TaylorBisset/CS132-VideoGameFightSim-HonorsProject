@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="playercharacter.cpp" />
+    <ClCompile Include="playercharacter.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.hpp" />

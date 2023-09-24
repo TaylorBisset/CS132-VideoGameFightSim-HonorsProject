@@ -1,5 +1,5 @@
 /*
-character.hpp
+playercharacter.hpp
 PlayerCharacter subclass for the players' characters. 
 This class is the where all the players' characters will be built from.
 */
