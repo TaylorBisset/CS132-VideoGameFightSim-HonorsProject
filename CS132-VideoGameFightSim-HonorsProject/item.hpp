@@ -22,12 +22,12 @@ public:
 
 	string getType() 
 		const { return type; }
-	int    getValue() 
+	int getValue() 
 		const { return value; }
 
 private:
 	string type; // armor, weapon
-	int	   value;
+	int	value;
 };
 
 #endif // !ITEM_HPP

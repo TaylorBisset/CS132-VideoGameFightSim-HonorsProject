@@ -131,6 +131,7 @@
     <ClCompile Include="player_character.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="armor.hpp" />
     <ClInclude Include="character.hpp" />
     <ClInclude Include="enemy_non_player_character.hpp" />
     <ClInclude Include="entity.hpp" />
