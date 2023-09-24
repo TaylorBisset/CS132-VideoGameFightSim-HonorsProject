@@ -25,3 +25,29 @@ int main()
 #endif
     return 0;
 }
+
+/*
+Class hierarchy: 
+
+Entity
+|
+|-Character
+| |--PlayerCharacter
+| |--NonPlayerCharacter
+|
+|-Item
+  |--Armor
+  |--Weapon
+  |--Consumable
+
+GameState
+|
+|-MainMenuState
+|
+|-GameplayState
+|
+|-PauseState
+|
+|-GameOverState
+
+*/
