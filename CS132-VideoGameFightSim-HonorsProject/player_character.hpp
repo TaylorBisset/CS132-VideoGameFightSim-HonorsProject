@@ -1,10 +1,10 @@
 /*
-playercharacter.hpp
+player_character.hpp
 PlayerCharacter subclass for the players' characters. 
 This class is the where all the players' characters will be built from.
 */
-#ifndef PLAYERCHARACTER_HPP
-#define PLAYERCHARACTER_HPP
+#ifndef PLAYER_CHARACTER_HPP
+#define PLAYER_CHARACTER_HPP
 
 #include "character.hpp"
 
@@ -30,4 +30,4 @@ private:
     int experience;
 };
 
-#endif // PLAYERCHARACTER_HPP
+#endif // PLAYER_CHARACTER_HPP

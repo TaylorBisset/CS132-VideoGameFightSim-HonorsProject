@@ -10,6 +10,7 @@
 
 #include "entity.hpp"
 #include "character.hpp"
+#include "player_character.hpp"
 
 int main()
 {
@@ -32,8 +33,10 @@ Class hierarchy:
 Entity
 |
 |-Character
-| |--PlayerCharacter
-| |--NonPlayerCharacter
+| |--Player_Character
+| |--Non_Player_Character
+| |  |---Enemy_Non_Player_Character
+| |  |---Friendly_NonPPlayer_Character
 |
 |-Item
   |--Armor
