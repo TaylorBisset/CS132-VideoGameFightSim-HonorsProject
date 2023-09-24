@@ -15,6 +15,10 @@
 #include "non_player_character.hpp"
 #include "enemy_non_player_character.hpp"
 
+#include "item.hpp"
+#include "armor.hpp"
+#include "weapon.hpp"
+
 int main()
 {
 

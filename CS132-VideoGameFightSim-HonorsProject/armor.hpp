@@ -1,6 +1,6 @@
 /*
 armor.hpp
-Armor subclass for all armor in the game.
+Armor subclass for all armor items in the game.
 This class is the main armor class from which all protection items will inherit.
 */
 #ifndef ARMOR_HPP
@@ -22,7 +22,7 @@ public:
 		// Armor properties
 	}
 
-	int getprotection() 
+	int getProtection() 
 		const { return protection; }
 
 private:

@@ -1,6 +1,6 @@
 /*
 character.hpp
-Character subclass for all characters in the game.
+Character subclass for all character entities in the game.
 This class is the main character class from which all characters will inherit.
 */
 #ifndef CHARACTER_HPP

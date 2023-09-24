@@ -41,5 +41,8 @@
     <ClInclude Include="armor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="weapon.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

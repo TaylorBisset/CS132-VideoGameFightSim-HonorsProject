@@ -1,6 +1,6 @@
 /*
 item.hpp
-Item subclass for all items in the game.
+Item subclass for all item entities in the game.
 This class is the main item class from which all items will inherit.
 */
 #ifndef ITEM_HPP
