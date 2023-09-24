@@ -39,18 +39,35 @@ int main()
 /*
 Class hierarchy: 
 
+- - - - - - - - - - - - - - - - - - - - 
+
 Entity
 |
 |-Character
+| |
 | |--Player_Character
+| |
 | |--Non_Player_Character
-| |  |---Enemy_Non_Player_Character
-| |  |---Friendly_NonPPlayer_Character
+|    |
+|    |---Enemy_Non_Player_Character
+|    |
+|    |---Friendly_Non_Player_Character
 |
 |-Item
+  |
   |--Armor
+  |  |
+  |  |---Armor_Manager
+  |
   |--Weapon
+  |  |
+  |  |---Weapon_Manager
+  |
   |--Consumable
+     |
+     |---Consumable_Manager
+
+- - - - - - - - - - - - - - - - - - - - 
 
 GameState
 |
@@ -61,5 +78,7 @@ GameState
 |-PauseState
 |
 |-GameOverState
+
+- - - - - - - - - - - - - - - - - - - - 
 
 */
