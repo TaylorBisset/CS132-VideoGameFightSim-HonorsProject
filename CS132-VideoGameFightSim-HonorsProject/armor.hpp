@@ -12,11 +12,11 @@ class Armor : public Item
 {
 public:
 	Armor(const string& name, const string& description, 
-		const string& type, int value, 
+		const string& type, int value, int requiredLevel,
 		int protection) :
 
 		Item(name, description, 
-			type, value), 
+			type, value, requiredLevel),
 		protection(protection)
 	{
 		// Armor properties

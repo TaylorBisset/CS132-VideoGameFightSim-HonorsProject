@@ -12,20 +12,18 @@ class Weapon : public Item
 {
 public:
 	Weapon(const string& name, const string& description,
-		const string& type, int value,
+		const string& type, int value, int requiredLevel,
 		int damage) :
 
 		Item(name, description,
-			type, value),
+			type, value, requiredLevel),
 		damage(damage)
 	{
 		// Weapon properties
 	}
 
 	int getDamage()
-		const {
-		return damage;
-	}
+		const { return damage; }
 
 private:
 	int damage;

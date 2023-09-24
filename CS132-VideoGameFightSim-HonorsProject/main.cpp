@@ -6,6 +6,9 @@
                 Professor Lonnie Heinke is my mentor through this quarters assignments. 
 */
 
+/*
+main.cpp
+*/
 #include <iostream>
 
 #include "entity.hpp"
@@ -21,7 +24,6 @@
 
 int main()
 {
-
     // OS independent program termination sequence. 
 #ifdef _WIN32
     cout << endl;

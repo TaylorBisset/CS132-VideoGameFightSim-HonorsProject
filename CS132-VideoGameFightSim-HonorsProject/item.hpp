@@ -12,10 +12,10 @@ class Item : public Entity
 {
 public:
 	Item(const string& name, const string& description, 
-		const string& type, int value) :
+		const string& type, int value, int requiredLevel) :
 
 		Entity(name, description), 
-		type(type), value(value)
+		type(type), value(value), requiredLevel(requiredLevel)
 	{
 		// Item properties
 	}
@@ -28,6 +28,7 @@ public:
 private:
 	string type; // armor, weapon
 	int	value;
+	int requiredLevel;
 };
 
 #endif // !ITEM_HPP
