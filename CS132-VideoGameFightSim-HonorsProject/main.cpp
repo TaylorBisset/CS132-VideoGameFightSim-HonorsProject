@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-using namespace std;
+#include "entity.hpp"
 
 int main()
 {
