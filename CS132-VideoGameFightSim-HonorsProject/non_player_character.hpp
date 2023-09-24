@@ -1,6 +1,6 @@
 /*
 non_player_character.hpp
-Non_Player_Character subclass for NPCs.
+NonPlayerCharacter subclass for NPCs.
 This class is the where all the NPCs will be built from.
 */
 #ifndef NON_PLAYER_CHARACTER_HPP
