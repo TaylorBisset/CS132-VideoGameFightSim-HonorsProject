@@ -20,7 +20,10 @@ main.cpp
 
 #include "item.hpp"
 #include "armor.hpp"
+#include "armor_manager.hpp"
 #include "weapon.hpp"
+#include "weapon_manager.hpp"
+#include "consumable.hpp"
 
 int main()
 {
