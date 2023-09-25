@@ -24,6 +24,7 @@ main.cpp
 #include "weapon.hpp"
 #include "weapon_manager.hpp"
 #include "consumable.hpp"
+#include "consumable_manager.hpp"
 
 int main()
 {

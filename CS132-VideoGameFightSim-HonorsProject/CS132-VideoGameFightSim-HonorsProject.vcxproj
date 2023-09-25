@@ -135,6 +135,7 @@
     <ClInclude Include="armor_manager.hpp" />
     <ClInclude Include="character.hpp" />
     <ClInclude Include="consumable.hpp" />
+    <ClInclude Include="consumable_manager.hpp" />
     <ClInclude Include="enemy_non_player_character.hpp" />
     <ClInclude Include="entity.hpp" />
     <ClInclude Include="item.hpp" />

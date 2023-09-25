@@ -53,5 +53,8 @@
     <ClInclude Include="consumable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="consumable_manager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
