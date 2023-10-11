@@ -30,6 +30,13 @@ main.cpp
 #include "consumable.hpp"
 #include "consumable_manager.hpp"
 
+#include "game_state.hpp"
+
+#include "game_play_state.hpp"
+#include "game_over_state.hpp"
+#include "main_menu_state.hpp"
+#include "pause_menu_state.hpp"
+
 int main()
 {
     // OS independent program termination sequence. 
