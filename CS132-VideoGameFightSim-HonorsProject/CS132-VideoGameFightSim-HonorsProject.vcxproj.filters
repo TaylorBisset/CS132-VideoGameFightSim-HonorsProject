@@ -21,7 +21,7 @@
     <ClCompile Include="player_character.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="main_menu_state.cpp">
+    <ClCompile Include="main_menu_state.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
