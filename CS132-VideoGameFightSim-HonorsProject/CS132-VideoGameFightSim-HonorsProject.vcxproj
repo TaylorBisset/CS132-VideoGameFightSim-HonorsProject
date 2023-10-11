@@ -138,6 +138,7 @@
     <ClInclude Include="consumable_manager.hpp" />
     <ClInclude Include="enemy_non_player_character.hpp" />
     <ClInclude Include="entity.hpp" />
+    <ClInclude Include="game_play_state.hpp" />
     <ClInclude Include="game_state.hpp" />
     <ClInclude Include="item.hpp" />
     <ClInclude Include="non_player_character.hpp" />
