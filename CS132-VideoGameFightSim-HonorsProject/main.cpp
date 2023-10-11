@@ -4,6 +4,7 @@
  Assignment:    Honors Project
  Description:   This project is for my AAS in Computer Science Honors coursework. 
                 Professor Lonnie Heinke is my mentor through this quarters' assignments. 
+Repo:           https://github.com/TaylorBisset/CS132-VideoGameFightSim-HonorsProject
 */
 
 /*

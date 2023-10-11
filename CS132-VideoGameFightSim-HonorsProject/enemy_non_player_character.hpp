@@ -1,6 +1,6 @@
 /*
 enemy_non_player_character.hpp
-EnembyNonPlayerCharacter subclass for enemy NPCs.
+EnemyNonPlayerCharacter subclass for enemy NPCs.
 This class is the where all the hostile NPCs will be built from.
 */
 #ifndef ENEMY_NON_PLAYER_CHARACTER_HPP
