@@ -144,6 +144,7 @@
     <ClInclude Include="game_state.hpp" />
     <ClInclude Include="item.hpp" />
     <ClInclude Include="non_player_character.hpp" />
+    <ClInclude Include="pause_menu_state.hpp" />
     <ClInclude Include="weapon.hpp" />
     <ClInclude Include="weapon_manager.hpp" />
   </ItemGroup>
