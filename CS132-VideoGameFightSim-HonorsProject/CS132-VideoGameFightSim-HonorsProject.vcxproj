@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_menu_state.cpp" />
     <ClCompile Include="player_character.hpp" />
   </ItemGroup>
   <ItemGroup>

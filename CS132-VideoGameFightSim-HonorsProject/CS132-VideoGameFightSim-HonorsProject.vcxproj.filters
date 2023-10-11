@@ -21,6 +21,9 @@
     <ClCompile Include="player_character.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_menu_state.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entity.hpp">
