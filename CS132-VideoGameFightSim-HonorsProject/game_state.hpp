@@ -6,6 +6,8 @@ This class is the base game state from which all game states will inherit.
 #ifndef GAME_STATE_HPP
 #define GAME_STATE_HPP
 
+#include <iostream>
+
 using namespace std;
 
 class GameState
