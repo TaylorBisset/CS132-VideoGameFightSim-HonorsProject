@@ -28,7 +28,7 @@ void MainMenuState::HandleInput()
         break;
     case 3:
         // Quit the game
-        exit(0);
+        return;
     default:
         // Handle invalid input
         cout << "Invalid choice. Please select a valid option.\n\n";

@@ -27,6 +27,9 @@
     <ClCompile Include="main_menu_state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pause_menu_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entity.hpp">
