@@ -12,12 +12,14 @@ class EnemyNonPlayerCharacter : public NonPlayerCharacter
 {
 public:
     EnemyNonPlayerCharacter(const string& name, const string& description,
-        int level, int health, int attack, int defense,
+        int level, int maxHealth, int currentHealth,
+        int attack, int defense,
         int attitude, 
         int loot) :
 
         NonPlayerCharacter(name, description,
-            level, health, attack, defense, 
+            level, maxHealth, currentHealth,
+            attack, defense, 
             attitude),
 
         loot(loot)
@@ -26,9 +28,7 @@ public:
     }
 
     int getLoot()
-        const {
-        return loot;
-    }
+        const { return loot; }
 
 private:
     int loot;
