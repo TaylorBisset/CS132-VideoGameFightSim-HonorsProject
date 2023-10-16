@@ -45,9 +45,6 @@ int main()
     GameManager gameManager;    // Create instance of game manager
     gameManager.Initialize();   // Initialize the game
     gameManager.RunGameLoop();  // Start the game, set state to main menu
-
-    GameFunctions gameFunctions;
-    gameFunctions.QuitGame();
     return 0;
 }
 

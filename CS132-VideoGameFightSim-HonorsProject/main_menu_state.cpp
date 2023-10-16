@@ -30,7 +30,7 @@ void MainMenuState::HandleInput()
         break;
     case 3:
         gameFunctions.QuitGame();
-        return;
+        exit(0);
     default:
         // Handle invalid input
         cout << "Invalid choice. Please select a valid option.\n\n";
