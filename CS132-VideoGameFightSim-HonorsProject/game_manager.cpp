@@ -32,9 +32,10 @@ void GameManager::RunGameLoop()
     {
         currentState->HandleInput();    // Handles user input inside the current state
 
-        if (currentState == new GamePlayState())                 // Check for Gameplay State
+        GamePlayState* gameplayState = dynamic_cast<GamePlayState*>(currentState);
+        if (gameplayState != nullptr)   // Check for Gameplay State
         {
-            static_cast<GamePlayState*>(currentState)->Update(); // If so, call Update()
+            gameplayState->Update();    // If so, call Update()
         }
     }
 }
