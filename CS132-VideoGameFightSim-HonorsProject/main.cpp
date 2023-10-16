@@ -15,6 +15,14 @@ main.cpp
 */
 #include <iostream>
 
+#include "game_manager.hpp"
+
+#include "game_state.hpp"
+
+#include "game_play_state.hpp"
+#include "main_menu_state.hpp"
+#include "pause_menu_state.hpp"
+
 #include "entity.hpp"
 
 #include "character.hpp"
@@ -29,12 +37,6 @@ main.cpp
 #include "weapon_manager.hpp"
 #include "consumable.hpp"
 #include "consumable_manager.hpp"
-
-#include "game_state.hpp"
-
-#include "game_play_state.hpp"
-#include "main_menu_state.hpp"
-#include "pause_menu_state.hpp"
 
 int main()
 {
@@ -51,7 +53,22 @@ int main()
 }
 
 /*
+
 Class hierarchy: 
+
+- - - - - - - - - - - - - - - - - - - - 
+
+Game_Manager
+
+- - - - - - - - - - - - - - - - - - - - 
+
+GameState
+|
+|-Main_Menu_State
+|
+|-Pause_Menu_State
+|
+|-Game_Play_State
 
 - - - - - - - - - - - - - - - - - - - - 
 
@@ -64,8 +81,6 @@ Entity
 | |--Non_Player_Character
 |    |
 |    |---Enemy_Non_Player_Character
-|    |
-|    |---Friendly_Non_Player_Character
 |
 |-Item
   |
@@ -81,18 +96,6 @@ Entity
      |
      |---Consumable_Manager
 
-- - - - - - - - - - - - - - - - - - - - 
-
-GameState
-|
-|-MainMenuState
-|
-|-PauseState
-|
-|-GamePlayState
-|
-|-GameOverState
-
-- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - -
 
 */
