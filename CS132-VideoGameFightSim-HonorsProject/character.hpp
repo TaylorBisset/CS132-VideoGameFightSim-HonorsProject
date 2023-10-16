@@ -12,7 +12,8 @@ class Character : public Entity
 {
 public:
     Character(const string& name, const string& description,
-        int level, int maxHealth, int currentHealth, int attack, int defense) :
+        int level, int maxHealth, int currentHealth, 
+        int attack, int defense) :
 
         Entity(name, description), 
         level(level), maxHealth(maxHealth), currentHealth(currentHealth), 
@@ -23,6 +24,8 @@ public:
 
     int getLevel() 
         const { return level; }
+    int getMaxHealth()
+        const { return maxHealth; }
     int getCurrentHealth()
         const { return currentHealth; }
     int getAttack() 
@@ -32,9 +35,9 @@ public:
 
     void setLevel(int newLevel)
         { level = newLevel; }
-    void setHealth(int newMaxHealth)
+    void setMaxHealth(int newMaxHealth)
         { maxHealth = newMaxHealth; }
-    void setHealth(int newCurrentHealth)
+    void setCurrentHealth(int newCurrentHealth)
         { currentHealth = newCurrentHealth; }
     void setAttack(int newAttack)
         { attack = newAttack; }

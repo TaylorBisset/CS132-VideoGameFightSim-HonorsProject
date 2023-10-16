@@ -12,15 +12,6 @@ void GameFunctions::StartNewGame(GameManager& gameManager)
 {
     GameState* newGameState = new GamePlayState();  // Create new gameplay state
 
-    string playerName = "John";
-    cout << "What is your name? ";
-    cin >> playerName;
-
-    PlayerCharacter playerCharacter(
-        // name, description, level, health, attack, defense, experience, coins
-        playerName, "A tough warrior in the making", 1, 10, 1, 1, 0, 20);
-
-    GameFunctions::SaveGame(playerCharacter);
     gameManager.ChangeState(newGameState);          // Change game state to the new gameplay state
 }
 
@@ -43,7 +34,8 @@ void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
     {
         saveFile << "Player Name: " << playerCharacter.getName() << endl;
         saveFile << "Level: "       << playerCharacter.getLevel() << endl;
-        saveFile << "Health: "      << playerCharacter.getHealth() << endl;
+        saveFile << "Health: "      << playerCharacter.getMaxHealth() << endl;
+        saveFile << "Health: "      << playerCharacter.getCurrentHealth() << endl;
         saveFile << "Attack: "      << playerCharacter.getAttack() << endl;
         saveFile << "Defense: "     << playerCharacter.getDefense() << endl;
         saveFile << "Experience: "  << playerCharacter.getExperience() << endl;

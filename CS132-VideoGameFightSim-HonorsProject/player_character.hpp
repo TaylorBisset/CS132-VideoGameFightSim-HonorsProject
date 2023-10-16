@@ -14,11 +14,13 @@ class PlayerCharacter : public Character
 {
 public:
     PlayerCharacter(const string& name, const string& description, 
-        int level, int health, int attack, int defense, 
+        int level, int maxHealth, int currentHealth, 
+        int attack, int defense, 
         int experience, int coins) :
 
         Character(name, description, 
-            level, health, attack, defense), 
+            level, maxHealth, currentHealth, 
+            attack, defense), 
 
         experience(experience), coins(coins)
     {
@@ -31,9 +33,9 @@ public:
         const { return coins; }
 
     void setExperience(int newExperience)
-    { experience = newExperience; }
+        { experience = newExperience; }
     void setCoins(int newCoins)
-    { coins = newCoins; }
+        { coins = newCoins; }
 
 private:
     int experience;

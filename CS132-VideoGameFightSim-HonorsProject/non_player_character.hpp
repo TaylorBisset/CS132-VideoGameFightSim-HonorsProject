@@ -12,11 +12,13 @@ class NonPlayerCharacter : public Character
 {
 public:
     NonPlayerCharacter(const string& name, const string& description, 
-        int level, int health, int attack, int defense, 
+        int level, int maxHealth, int currentHealth, 
+        int attack, int defense, 
         int attitude) :
 
         Character(name, description, 
-            level, health, attack, defense), 
+            level, maxHealth, currentHealth, 
+            attack, defense), 
 
         attitude(attitude)
     {
