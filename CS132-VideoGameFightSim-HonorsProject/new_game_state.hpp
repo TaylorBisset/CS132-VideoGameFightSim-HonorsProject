@@ -13,7 +13,6 @@ class NewGameState : public GameState
 public:
     void Initialize() override;
     void HandleInput() override;
-    void Update() override;
 };
 
 #endif // !NEW_GAME_STATE_HPP
