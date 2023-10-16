@@ -144,7 +144,6 @@
     <ClInclude Include="enemy_non_player_character.hpp" />
     <ClInclude Include="entity.hpp" />
     <ClInclude Include="game_manager.hpp" />
-    <ClInclude Include="game_over_state.hpp" />
     <ClInclude Include="game_play_state.hpp" />
     <ClInclude Include="game_state.hpp" />
     <ClInclude Include="item.hpp" />

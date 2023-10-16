@@ -77,9 +77,6 @@
     <ClInclude Include="game_play_state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="game_over_state.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pause_menu_state.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
