@@ -40,6 +40,8 @@ main.cpp
 
 int main()
 {
+    GameManager gameManager;    // Create instance of game manager
+
     // OS independent program termination sequence. 
 #ifdef _WIN32
     cout << endl;
