@@ -55,6 +55,7 @@ Class hierarchy:
 - - - - - - - - - - - - - - - - - - - -
 
 Game_Functions
+
 - - - - - - - - - - - - - - - - - - - -
 
 Game_Manager
