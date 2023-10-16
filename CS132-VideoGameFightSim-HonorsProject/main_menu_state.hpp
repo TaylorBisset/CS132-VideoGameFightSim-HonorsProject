@@ -13,6 +13,7 @@ class MainMenuState : public GameState
 public:
     void Initialize() override;  // Initialize game state
     void HandleInput() override; // Handle player input
+    void Update() override;      // Implement game mechanics
 };
 
 #endif // !MAIN_MENU_STATE_HPP

@@ -38,3 +38,5 @@ void PauseMenuState::HandleInput()
         break;
     }
 }
+
+void Update() {}
