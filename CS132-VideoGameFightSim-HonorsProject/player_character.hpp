@@ -28,9 +28,12 @@ public:
     int getExperience()
         const { return experience; }
     int getCoins()
-        const {
-        return coins;
-    }
+        const { return coins; }
+
+    void setExperience(int newExperience)
+    { experience = newExperience; }
+    void setCoins(int newCoins)
+    { coins = newCoins; }
 
 private:
     int experience;

@@ -29,6 +29,15 @@ public:
     int getDefense() 
         const { return defense; }
 
+    void setLevel(int newLevel)
+        { level = newLevel; }
+    void setHealth(int newHealth)
+        { health = newHealth; }
+    void setAttack(int newAttack)
+        { attack = newAttack; }
+    void setDefense(int newDefense)
+        { defense = newDefense; }
+
 private:
     int level;
     int health;
