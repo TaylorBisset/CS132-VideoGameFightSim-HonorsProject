@@ -3,9 +3,11 @@ game_manager.cpp
 This file implements the Game States and the Game Loop
 */
 #include "game_manager.hpp"
+#include "game_state.hpp"
 #include "main_menu_state.hpp"
 #include "pause_menu_state.hpp"
 #include "game_play_state.hpp"
+#include "new_game_state.hpp"
 
 GameManager::GameManager()
 {
@@ -25,6 +27,14 @@ void GameManager::Initialize()
     currentState->Initialize();         // Set the initial state
 }
 
+void GameManager::RunGameLoop()
+{
+    while (true)                        // Runs through the game loop
+    {
+        currentState->HandleInput();    // Handles user input inside the current state
+        currentState->Update();         // Updates according to the current state's parameters
+    }
+}
 
 void GameManager::ChangeState(GameState* newState)
 {
