@@ -32,7 +32,6 @@ void GameManager::RunGameLoop()
     while (true)                        // Runs through the game loop
     {
         currentState->HandleInput();    // Handles user input inside the current state
-        currentState->Update();         // Updates according to the current state's parameters
     }
 }
 
