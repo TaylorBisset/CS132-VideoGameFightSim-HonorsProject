@@ -7,7 +7,6 @@ This file implements the Game States and the Game Loop
 #include "main_menu_state.hpp"
 #include "pause_menu_state.hpp"
 #include "game_play_state.hpp"
-#include "new_game_state.hpp"
 
 GameManager::GameManager()
 {
