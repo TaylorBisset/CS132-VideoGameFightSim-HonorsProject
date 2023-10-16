@@ -13,21 +13,26 @@ class PlayerCharacter : public Character
 public:
     PlayerCharacter(const string& name, const string& description, 
         int level, int health, int attack, int defense, 
-        int experience) :
+        int experience, int coins) :
 
         Character(name, description, 
             level, health, attack, defense), 
 
-        experience(experience)
+        experience(experience), coins(coins)
     {
         // Player character properties
     }
 
     int getExperience()
         const { return experience; }
+    int getCoins()
+        const {
+        return coins;
+    }
 
 private:
     int experience;
+    int coins;
 };
 
 #endif // PLAYER_CHARACTER_HPP
