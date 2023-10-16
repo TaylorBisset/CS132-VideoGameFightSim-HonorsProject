@@ -30,7 +30,7 @@
     <ClCompile Include="pause_menu_state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="new_game_state.cpp">
+    <ClCompile Include="new_game_state.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
