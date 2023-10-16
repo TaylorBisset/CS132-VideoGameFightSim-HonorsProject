@@ -35,5 +35,3 @@ void MainMenuState::HandleInput()
         break;
     }
 }
-
-void Update() {}
