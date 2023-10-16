@@ -13,7 +13,7 @@ class GamePlayState : public GameState
 public:
     void Initialize() override;  // Initialize game state
     void HandleInput() override; // Handle player input
-    void Update() override;      // Implement game mechanics
+    void Update();               // Implement game mechanics
 };
 
 #endif // !GAME_PLAY_STATE_HPP
