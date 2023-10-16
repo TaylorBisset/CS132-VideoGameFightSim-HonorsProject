@@ -33,9 +33,23 @@ void GameFunctions::PauseGame()
 
 }
 
-void GameFunctions::SaveGame()
+void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
 {
+    const string saveFileName = "savegame.txt";
+    
+    ofstream saveFile(saveFileName);
+    if (saveFile.is_open())
+    {
+        saveFile << "Player Name: " << playerCharacter.getName() << endl;
+        saveFile << "Level: "       << playerCharacter.getLevel() << endl;
+        saveFile << "Health: "      << playerCharacter.getHealth() << endl;
+        saveFile << "Attack: "      << playerCharacter.getAttack() << endl;
+        saveFile << "Defense: "     << playerCharacter.getDefense() << endl;
+        saveFile << "Experience: "  << playerCharacter.getExperience() << endl;
+        saveFile << "Coins: "       << playerCharacter.getCoins() << endl;
 
+        saveFile.close();
+    }
 }
 
 void GameFunctions::QuitGame()

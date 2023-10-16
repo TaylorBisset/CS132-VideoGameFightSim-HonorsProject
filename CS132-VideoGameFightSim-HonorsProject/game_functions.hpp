@@ -6,6 +6,7 @@ This file defines the functions to be used in the game.
 #define GAME_FUNCTIONS_HPP
 
 #include <iostream>
+#include <fstream>
 #include <string>
 
 using namespace std;
@@ -18,7 +19,7 @@ public:
     void StartNewGame(GameManager& gameManager);
     void ContinueGame();
     void PauseGame();
-    void SaveGame();
+    void SaveGame(const PlayerCharacter& playerCharacter);
     void QuitGame();
 };
 
