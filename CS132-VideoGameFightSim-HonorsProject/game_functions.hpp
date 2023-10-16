@@ -12,6 +12,7 @@ This file defines the functions to be used in the game.
 using namespace std;
 
 class GameManager;
+class PlayerCharacter;
 
 class GameFunctions
 {

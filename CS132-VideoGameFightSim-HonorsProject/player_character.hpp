@@ -8,6 +8,8 @@ This class is the where all the players' characters will be built from.
 
 #include "character.hpp"
 
+class GameFunctions;
+
 class PlayerCharacter : public Character
 {
 public:
