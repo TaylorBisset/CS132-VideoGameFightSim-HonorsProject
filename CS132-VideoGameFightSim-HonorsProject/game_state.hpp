@@ -15,7 +15,6 @@ class GameState
 public:
     virtual void Initialize() = 0;  // Initialize game state
     virtual void HandleInput() = 0; // Handle player input
-    virtual void Update() = 0;      // Implement game mechanics
 };
 
 #endif // !GAME_STATE_HPP
