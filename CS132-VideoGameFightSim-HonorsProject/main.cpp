@@ -41,6 +41,8 @@ main.cpp
 int main()
 {
     GameManager gameManager;    // Create instance of game manager
+    gameManager.Initialize();   // Initialize the game
+    gameManager.RunGameLoop();  // Start the game
 
     // OS independent program termination sequence. 
 #ifdef _WIN32
