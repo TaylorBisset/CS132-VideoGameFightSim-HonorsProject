@@ -20,6 +20,7 @@ void GameFunctions::StartNewGame(GameManager& gameManager)
         // name, description, level, health, attack, defense, experience, coins
         playerName, "A tough warrior in the making", 1, 10, 1, 1, 0, 20);
 
+    GameFunctions::SaveGame(playerCharacter);
     gameManager.ChangeState(newGameState);          // Change game state to the new gameplay state
 }
 
@@ -35,7 +36,7 @@ void GameFunctions::PauseGame()
 
 void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
 {
-    const string saveFileName = "savegame.txt";
+    const string saveFileName = "save_game.txt";
     
     ofstream saveFile(saveFileName);
     if (saveFile.is_open())
