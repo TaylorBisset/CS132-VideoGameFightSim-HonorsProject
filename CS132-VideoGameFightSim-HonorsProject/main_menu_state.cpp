@@ -6,6 +6,7 @@ This file implements the Main Menu
 #include "main_menu_state.hpp"
 
 GameFunctions gameFunctions;
+GameManager gameManager;
 
 void MainMenuState::Initialize()
 {
@@ -23,7 +24,7 @@ void MainMenuState::HandleInput()
     switch (choice) 
     {
     case 1:
-        // Start a new game
+        gameFunctions.StartNewGame(gameManager);
         break;
     case 2:
         // Continue a saved game
