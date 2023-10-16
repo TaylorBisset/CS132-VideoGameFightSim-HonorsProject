@@ -17,6 +17,8 @@ main.cpp
 
 #include "game_manager.hpp"
 
+#include "game_functions.hpp"
+
 #include "game_state.hpp"
 
 #include "game_play_state.hpp"
@@ -42,17 +44,10 @@ int main()
 {
     GameManager gameManager;    // Create instance of game manager
     gameManager.Initialize();   // Initialize the game
-    gameManager.RunGameLoop();  // Start the game
+    gameManager.RunGameLoop();  // Start the game, set state to main menu
 
-    // OS independent program termination sequence. 
-#ifdef _WIN32
-    cout << endl;
-    system("pause");
-#else
-    cout << endl;
-    cout << "Press any key to continue . . . ";
-    cin.get();
-#endif
+    GameFunctions gameFunctions;
+    gameFunctions.QuitGame();
     return 0;
 }
 
@@ -60,7 +55,10 @@ int main()
 
 Class hierarchy: 
 
-- - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - -
+
+Game_Functions
+- - - - - - - - - - - - - - - - - - - -
 
 Game_Manager
 

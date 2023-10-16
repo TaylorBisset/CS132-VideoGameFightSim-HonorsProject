@@ -5,6 +5,8 @@ This file implements the Main Menu
 
 #include "main_menu_state.hpp"
 
+GameFunctions gameFunctions;
+
 void MainMenuState::Initialize()
 {
 	cout << "Main Menu\n\n";
@@ -27,7 +29,7 @@ void MainMenuState::HandleInput()
         // Continue a saved game
         break;
     case 3:
-        // Quit the game
+        gameFunctions.QuitGame();
         return;
     default:
         // Handle invalid input

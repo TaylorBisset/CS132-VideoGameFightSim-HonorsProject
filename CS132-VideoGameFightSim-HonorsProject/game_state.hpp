@@ -8,7 +8,12 @@ This class is the base game state from which all game states will inherit.
 
 #include <iostream>
 
+#include "game_functions.hpp"
+#include "game_manager.hpp"
+
 using namespace std;
+
+class GameManager;
 
 class GameState
 {

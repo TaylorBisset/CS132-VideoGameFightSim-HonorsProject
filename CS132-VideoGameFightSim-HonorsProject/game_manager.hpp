@@ -6,6 +6,9 @@ This class is the Game Manager, which dictates game state changes.
 #define GAME_MANAGER_HPP
 
 #include "game_state.hpp"
+#include "game_functions.hpp"
+
+class GameState;
 
 class GameManager
 {
