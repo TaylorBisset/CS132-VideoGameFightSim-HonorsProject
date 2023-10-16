@@ -10,7 +10,7 @@ GameManager gameManager;
 
 void MainMenuState::Initialize()
 {
-	cout << "Main Menu\n\n";
+	cout << "\nMain Menu\n\n";
     cout << "1. New Game\n";
     cout << "2. Continue\n";
     cout << "3. Quit\n\n";
@@ -24,7 +24,21 @@ void MainMenuState::HandleInput()
     switch (choice) 
     {
     case 1:
-        gameFunctions.StartNewGame(gameManager);
+        cout << "\nCreating a New Game will override any previously saved game.\n";
+        cout << "Are you ready to start a New Game?\n";
+        cout << "1. Yes, start new game\n";
+        cout << "2. No, return to main menu\n";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            gameFunctions.StartNewGame(gameManager);
+            break;
+        default:
+            Initialize();
+            break;
+        }
         break;
     case 2:
         // Continue a saved game

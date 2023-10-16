@@ -1,0 +1,7 @@
+Player Name: 6
+Level: 1
+Health: 10
+Attack: 1
+Defense: 1
+Experience: 0
+Coins: 20
