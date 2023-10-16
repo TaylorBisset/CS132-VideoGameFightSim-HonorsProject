@@ -131,7 +131,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main_menu_state.cpp" />
     <ClCompile Include="main_menu_state.hpp" />
-    <ClCompile Include="new_game_state.hpp" />
     <ClCompile Include="pause_menu_state.cpp" />
     <ClCompile Include="player_character.hpp" />
   </ItemGroup>
