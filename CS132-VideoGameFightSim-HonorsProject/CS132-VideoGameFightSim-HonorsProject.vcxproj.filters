@@ -33,6 +33,9 @@
     <ClCompile Include="new_game_state.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="game_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entity.hpp">
