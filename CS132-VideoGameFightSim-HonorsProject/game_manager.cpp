@@ -55,7 +55,24 @@ void GameManager::ChangeState(GameState* newState)
 
 void GameManager::StartNewGame()
 {
-    PlayerCharacter player("PlayerName", "A tough looking warrior", 1, 100, 100, 5, 5, 0, 0);
+    cout << "\nWelcome to the Coliseum\n";
+    cout << "What is your name, Gladiator?\n";
+    string playerName;
+    cin >> playerName;
+    cout <<  "\nExcellent! Alright, " << playerName << ", here's 10 coins to gear up with.\n";
+    cout << "Head down the halls to the Armamentarium.\n\n";
 
-    ChangeState(new GamePlayState());
+    /*
+        name, description, 
+        level, maxHealth, currentHealth, 
+        attack, defense, 
+        experience, coins
+    */
+    PlayerCharacter player(
+        playerName, "A tough looking warrior", 
+        1, 100, 100, 
+        5, 5, 
+        0, 10);
+
+    ChangeState(new GamePlayState(this));
 }
