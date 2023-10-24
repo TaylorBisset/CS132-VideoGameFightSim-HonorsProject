@@ -10,7 +10,7 @@ This file implements the functions to be used in the game.
 
 void GameFunctions::ContinueGame()
 {
-
+    
 }
 
 void GameFunctions::PauseGame()
@@ -25,14 +25,14 @@ void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
     ofstream saveFile(saveFileName);
     if (saveFile.is_open())
     {
-        saveFile << "Player Name: " << playerCharacter.getName() << endl;
-        saveFile << "Level: "       << playerCharacter.getLevel() << endl;
-        saveFile << "Health: "      << playerCharacter.getMaxHealth() << endl;
-        saveFile << "Health: "      << playerCharacter.getCurrentHealth() << endl;
-        saveFile << "Attack: "      << playerCharacter.getAttack() << endl;
-        saveFile << "Defense: "     << playerCharacter.getDefense() << endl;
-        saveFile << "Experience: "  << playerCharacter.getExperience() << endl;
-        saveFile << "Coins: "       << playerCharacter.getCoins() << endl;
+        saveFile << "Player Name: "     << playerCharacter.getName() << endl;
+        saveFile << "Level: "           << playerCharacter.getLevel() << endl;
+        saveFile << "Max Health: "      << playerCharacter.getMaxHealth() << endl;
+        saveFile << "Current Health: "  << playerCharacter.getCurrentHealth() << endl;
+        saveFile << "Attack: "          << playerCharacter.getAttack() << endl;
+        saveFile << "Defense: "         << playerCharacter.getDefense() << endl;
+        saveFile << "Experience: "      << playerCharacter.getExperience() << endl;
+        saveFile << "Coins: "           << playerCharacter.getCoins() << endl;
 
         saveFile.close();
     }

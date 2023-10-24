@@ -25,6 +25,11 @@ public:
     string getDescription() 
         const { return description; }
 
+    void setName(string newName) 
+        { name = newName; }
+    void setDescription(string newDescription)
+        { description = newDescription; }
+
 private:
     string name;
     string description;

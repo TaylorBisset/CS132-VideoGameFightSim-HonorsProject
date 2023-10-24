@@ -33,7 +33,7 @@ void MainMenuState::HandleInput()
         switch (choice)
         {
         case 1:
-            gameFunctions.StartNewGame(gameManager);
+            gameManager.StartNewGame();
             break;
         default:
             Initialize();

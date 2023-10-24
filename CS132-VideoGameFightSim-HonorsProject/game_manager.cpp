@@ -13,6 +13,7 @@ GameManager::GameManager()
 {
     currentState = nullptr;     // Initialize the current state pointer
 }
+
 GameManager::~GameManager()
 {
     if (currentState != nullptr)
@@ -54,5 +55,7 @@ void GameManager::ChangeState(GameState* newState)
 
 void GameManager::StartNewGame()
 {
+    PlayerCharacter player("PlayerName", "A tough looking warrior", 1, 100, 100, 5, 5, 0, 0);
 
+    ChangeState(new GamePlayState());
 }

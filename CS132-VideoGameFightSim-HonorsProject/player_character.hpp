@@ -13,6 +13,8 @@ class GameFunctions;
 class PlayerCharacter : public Character
 {
 public:
+    PlayerCharacter() : Character("", "", 1, 100, 100, 5, 5), experience(0), coins(0) {}
+
     PlayerCharacter(const string& name, const string& description, 
         int level, int maxHealth, int currentHealth, 
         int attack, int defense, 
