@@ -51,3 +51,8 @@ void GameManager::ChangeState(GameState* newState)
     currentState = newState;    // Set the current state to the new state
     currentState->Initialize(); // Initialize the new game state
 }
+
+void GameManager::StartNewGame()
+{
+
+}

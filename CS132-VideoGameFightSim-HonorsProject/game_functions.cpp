@@ -8,13 +8,6 @@ This file implements the functions to be used in the game.
 #include "game_play_state.hpp"
 #include "player_character.hpp"
 
-void GameFunctions::StartNewGame(GameManager& gameManager)
-{
-    GameState* newGameState = new GamePlayState();  // Create new gameplay state
-
-    gameManager.ChangeState(newGameState);          // Change game state to the new gameplay state
-}
-
 void GameFunctions::ContinueGame()
 {
 

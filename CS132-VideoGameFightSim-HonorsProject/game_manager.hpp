@@ -7,6 +7,7 @@ This class is the Game Manager, which dictates game state changes.
 
 #include "game_state.hpp"
 #include "game_functions.hpp"
+#include "player_character.hpp"
 
 class GameState;
 
@@ -22,8 +23,11 @@ public:
 
     void ChangeState(GameState* newState);
 
+    void StartNewGame();
+
 private:
     GameState* currentState;  // Pointer to the current game state
+    PlayerCharacter playerCharacter;
 };
 
 #endif // !GAME_MANAGER_HPP
