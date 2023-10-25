@@ -18,13 +18,14 @@ void GameFunctions::PauseGame()
 
 }
 
-void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
+void SaveGame(GameManager& gameManager)
 {
     const string saveFileName = "save_game.txt";
     
     ofstream saveFile(saveFileName);
     if (saveFile.is_open())
     {
+        const PlayerCharacter& playerCharacter = gameManager.GetPlayerCharacter();
         saveFile << "Player Name: "     << playerCharacter.getName() << endl;
         saveFile << "Level: "           << playerCharacter.getLevel() << endl;
         saveFile << "Max Health: "      << playerCharacter.getMaxHealth() << endl;

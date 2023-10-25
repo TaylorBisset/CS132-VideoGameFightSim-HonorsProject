@@ -2,6 +2,9 @@
 game_manager.cpp
 This file implements the Game States and the Game Loop
 */
+
+#include <thread>
+
 #include "game_manager.hpp"
 #include "game_state.hpp"
 #include "main_menu_state.hpp"
@@ -59,8 +62,12 @@ void GameManager::StartNewGame()
     cout << "What is your name, Gladiator?\n";
     string playerName;
     cin >> playerName;
-    cout <<  "\nExcellent! Alright, " << playerName << ", here's 10 coins to gear up with.\n";
-    cout << "Head down the halls to the Armamentarium.\n\n";
+    cout << "\nExcellent! Alright, " << playerName << ",\n";
+    this_thread::sleep_for(std::chrono::seconds(2));
+    cout << "here's 10 coins to gear up with.\n";
+    this_thread::sleep_for(std::chrono::seconds(2));
+    cout << "Head down the halls to the Armamentarium.\n";
+    this_thread::sleep_for(std::chrono::seconds(2));
 
     /*
         name, description, 
@@ -73,6 +80,8 @@ void GameManager::StartNewGame()
         1, 100, 100, 
         5, 5, 
         0, 10);
+
+    playerCharacter = player;
 
     ChangeState(new GamePlayState(this));
 }

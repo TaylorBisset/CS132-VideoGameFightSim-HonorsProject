@@ -25,6 +25,9 @@ public:
 
     void StartNewGame();
 
+    const PlayerCharacter& GetPlayerCharacter()
+        const { return playerCharacter; }
+
 private:
     GameState* currentState;  // Pointer to the current game state
     PlayerCharacter playerCharacter;
