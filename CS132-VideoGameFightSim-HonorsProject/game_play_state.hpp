@@ -8,11 +8,12 @@ This class is the game state that lets the game play.
 
 #include "game_state.hpp"
 #include "game_functions.hpp"
+#include "player_character.hpp"
 
 class GamePlayState : public GameState
 {
 public:
-    GamePlayState(GameManager* gm) : gameManager(gm) {}
+    GamePlayState(GameManager* gm, PlayerCharacter player) : gameManager(gm), playerCharacter(player) {}
 
     void Initialize() override;  // Initialize game state
     void HandleInput() override; // Handle player input
@@ -21,6 +22,7 @@ public:
 
 private:
     GameManager* gameManager;
+    PlayerCharacter playerCharacter;
 };
 
 #endif // !GAME_PLAY_STATE_HPP

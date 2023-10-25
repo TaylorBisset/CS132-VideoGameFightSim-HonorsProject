@@ -1,8 +1,8 @@
-Player Name: Taylor
+Player Name: 
 Level: 1
 Max Health: 100
 Current Health: 100
 Attack: 5
 Defense: 5
 Experience: 0
-Coins: 10
+Coins: 0

@@ -83,5 +83,5 @@ void GameManager::StartNewGame()
 
     playerCharacter = player;
 
-    ChangeState(new GamePlayState(this));
+    ChangeState(new GamePlayState(this, playerCharacter));
 }

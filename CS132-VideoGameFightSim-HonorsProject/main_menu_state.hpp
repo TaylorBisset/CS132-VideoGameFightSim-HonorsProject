@@ -9,6 +9,7 @@ This class is the game state for the main menu.
 #include "game_state.hpp"
 #include "game_manager.hpp"
 #include "game_functions.hpp"
+#include "game_play_state.hpp"
 
 class MainMenuState : public GameState
 {

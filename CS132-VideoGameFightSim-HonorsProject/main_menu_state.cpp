@@ -24,6 +24,8 @@ void MainMenuState::HandleInput()
     cin >> choice;
 
     PlayerCharacter loadedPlayer;
+    PlayerCharacter playerCharacter;
+    GamePlayState* newGameState = nullptr;
 
     switch (choice) 
     {
@@ -54,7 +56,12 @@ void MainMenuState::HandleInput()
         loadedPlayer.setDefense(1);
         loadedPlayer.setExperience(1);
         loadedPlayer.setCoins(1);
+
         gameFunctions.LoadGame(loadedPlayer);
+        
+        newGameState = new GamePlayState(&gameManager, playerCharacter);
+        gameManager.ChangeState(newGameState);
+
         break;
     case 3:
         gameFunctions.QuitGame();
