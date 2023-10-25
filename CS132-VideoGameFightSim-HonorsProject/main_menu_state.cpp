@@ -23,6 +23,8 @@ void MainMenuState::HandleInput()
     int choice;
     cin >> choice;
 
+    PlayerCharacter loadedPlayer;
+
     switch (choice) 
     {
     case 1:
@@ -43,7 +45,16 @@ void MainMenuState::HandleInput()
         }
         break;
     case 2:
-        // Load a saved game
+        cout << "\nLoading the saved game...\n";
+        loadedPlayer.setName("player");
+        loadedPlayer.setLevel(1);
+        loadedPlayer.setMaxHealth(1);
+        loadedPlayer.setCurrentHealth(1);
+        loadedPlayer.setAttack(1);
+        loadedPlayer.setDefense(1);
+        loadedPlayer.setExperience(1);
+        loadedPlayer.setCoins(1);
+        gameFunctions.LoadGame(loadedPlayer);
         break;
     case 3:
         gameFunctions.QuitGame();
