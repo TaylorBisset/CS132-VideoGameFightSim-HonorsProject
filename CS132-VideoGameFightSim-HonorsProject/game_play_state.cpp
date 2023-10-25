@@ -27,8 +27,6 @@ void GamePlayState::Update()
 
 void GamePlayState::IdleMenu()
 {
-    while (true)
-    {
         cout << "\n\tWelcome to Armamentarium\n\n";
 
         cout << "Make your choice\n\n";
@@ -37,7 +35,7 @@ void GamePlayState::IdleMenu()
         cout << "2. Check gear and stats\n";
         cout << "3. Buy gear\n";
         cout << "4. Save the game\n";
-        cout << "5. Exit to Main Menu\n";
+        cout << "5. Exit to Main Menu\n\n";
 
         int choice;
         cin >> choice;
@@ -60,10 +58,9 @@ void GamePlayState::IdleMenu()
         case 5:
             // Return to the Main Menu
             gameManager->ChangeState(new MainMenuState());
-            return;
+            break;
         default:
             cout << "Invalid choice. Please select a valid option.\n\n";
             break;
         }
-    }
 }

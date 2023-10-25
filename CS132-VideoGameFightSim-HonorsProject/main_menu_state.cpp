@@ -14,6 +14,8 @@ void MainMenuState::Initialize()
     cout << "1. New Game\n";
     cout << "2. Continue\n";
     cout << "3. Quit\n\n";
+
+    HandleInput();
 }
 
 void MainMenuState::HandleInput()
@@ -27,7 +29,7 @@ void MainMenuState::HandleInput()
         cout << "\nCreating a New Game will override any previously saved game.\n";
         cout << "Are you ready to start a New Game?\n";
         cout << "1. Yes, start new game\n";
-        cout << "2. No, return to main menu\n";
+        cout << "2. No, return to main menu\n\n";
         cin >> choice;
 
         switch (choice)
