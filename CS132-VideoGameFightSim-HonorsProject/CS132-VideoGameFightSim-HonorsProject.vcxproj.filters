@@ -90,4 +90,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="save_game.txt" />
+  </ItemGroup>
 </Project>

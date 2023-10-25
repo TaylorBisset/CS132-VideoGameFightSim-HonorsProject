@@ -29,9 +29,9 @@ void GamePlayState::Update()
 
 void GamePlayState::IdleMenu()
 {
-    this_thread::sleep_for(std::chrono::seconds(2));
-    cout << "\n\tWelcome to Armamentarium\n\n";
-    this_thread::sleep_for(std::chrono::seconds(2));
+    this_thread::sleep_for(chrono::seconds(1));
+    cout << "\n\tWelcome to Armamentarium, " << playerCharacter.getName() << endl << endl;
+    this_thread::sleep_for(chrono::seconds(1));
     cout << "Make your choice\n\n";
     cout << "1. Fight your next opponent\n";
     cout << "2. Check gear and stats\n";

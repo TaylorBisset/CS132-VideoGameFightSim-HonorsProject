@@ -17,36 +17,62 @@ void GameFunctions::LoadGame(PlayerCharacter& playerCharacter)
     ifstream loadFile(saveFileName);
     if (loadFile.is_open())
     {
-        string playerName;
-        int playerLevel;
-        int playerMaxHealth;
-        int playerCurrentHealth;
-        int playerAttack;
-        int playerDefense;
-        int playerExperience;
-        int playerCoins;
-
-        loadFile >> playerName;
-        loadFile >> playerLevel;
-        loadFile >> playerMaxHealth;
-        loadFile >> playerCurrentHealth;
-        loadFile >> playerAttack;
-        loadFile >> playerDefense;
-        loadFile >> playerExperience;
-        loadFile >> playerCoins;
-
-        playerCharacter.setName(playerName);
-        playerCharacter.setLevel(playerLevel);
-        playerCharacter.setMaxHealth(playerMaxHealth);
-        playerCharacter.setCurrentHealth(playerCurrentHealth);
-        playerCharacter.setAttack(playerAttack);
-        playerCharacter.setDefense(playerDefense);
-        playerCharacter.setExperience(playerExperience);
-        playerCharacter.setCoins(playerCoins);
+        string label;
+        while (loadFile >> label)
+        {
+            if (label == "Player")
+            {
+                string name;
+                loadFile >> name; // Read the player name
+                playerCharacter.setName(name);
+            }
+            else if (label == "Level:")
+            {
+                int level;
+                loadFile >> level; // Read the player level
+                playerCharacter.setLevel(level);
+            }
+            else if (label == "Max")
+            {
+                int maxHealth;
+                loadFile >> maxHealth; // Read the max health
+                playerCharacter.setMaxHealth(maxHealth);
+            }
+            else if (label == "Current")
+            {
+                int currentHealth;
+                loadFile >> currentHealth; // Read the current health
+                playerCharacter.setCurrentHealth(currentHealth);
+            }
+            else if (label == "Attack:")
+            {
+                int attack;
+                loadFile >> attack; // Read the attack value
+                playerCharacter.setAttack(attack);
+            }
+            else if (label == "Defense:")
+            {
+                int defense;
+                loadFile >> defense; // Read the defense value
+                playerCharacter.setDefense(defense);
+            }
+            else if (label == "Experience:")
+            {
+                int experience;
+                loadFile >> experience; // Read the experience value
+                playerCharacter.setExperience(experience);
+            }
+            else if (label == "Coins:")
+            {
+                int coins;
+                loadFile >> coins; // Read the coins value
+                playerCharacter.setCoins(coins);
+            }
+        }
 
         loadFile.close();
         cout << "Game loaded successfully\n";
-        this_thread::sleep_for(std::chrono::seconds(2));
+        this_thread::sleep_for(chrono::seconds(1));
     }
 }
 
@@ -73,7 +99,7 @@ void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
 
         saveFile.close();
         cout << "Game saved successfully\n";
-        this_thread::sleep_for(std::chrono::seconds(2));
+        this_thread::sleep_for(chrono::seconds(1));
     }
 }
 

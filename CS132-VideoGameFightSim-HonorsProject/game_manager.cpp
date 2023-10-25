@@ -63,11 +63,11 @@ void GameManager::StartNewGame()
     string playerName;
     cin >> playerName;
     cout << "\nExcellent! Alright, " << playerName << ",\n";
-    this_thread::sleep_for(std::chrono::seconds(2));
+    this_thread::sleep_for(chrono::seconds(1));
     cout << "here's 10 coins to gear up with.\n";
-    this_thread::sleep_for(std::chrono::seconds(2));
+    this_thread::sleep_for(chrono::seconds(1));
     cout << "Head down the halls to the Armamentarium.\n";
-    this_thread::sleep_for(std::chrono::seconds(2));
+    this_thread::sleep_for(chrono::seconds(1));
 
     /*
         name, description, 

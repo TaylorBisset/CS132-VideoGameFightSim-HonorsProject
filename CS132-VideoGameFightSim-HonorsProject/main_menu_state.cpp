@@ -48,17 +48,11 @@ void MainMenuState::HandleInput()
         break;
     case 2:
         cout << "\nLoading the saved game...\n";
-        loadedPlayer.setName("player");
-        loadedPlayer.setLevel(1);
-        loadedPlayer.setMaxHealth(1);
-        loadedPlayer.setCurrentHealth(1);
-        loadedPlayer.setAttack(1);
-        loadedPlayer.setDefense(1);
-        loadedPlayer.setExperience(1);
-        loadedPlayer.setCoins(1);
 
         gameFunctions.LoadGame(loadedPlayer);
-        
+
+        playerCharacter = loadedPlayer;
+
         newGameState = new GamePlayState(&gameManager, playerCharacter);
         gameManager.ChangeState(newGameState);
 
