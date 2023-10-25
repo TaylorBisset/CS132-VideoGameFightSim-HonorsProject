@@ -17,7 +17,7 @@ class PlayerCharacter;
 class GameFunctions
 {
 public:
-    void ContinueGame();
+    void LoadGame(PlayerCharacter& playerCharacter);
     void PauseGame();
     void SaveGame(const PlayerCharacter& playerCharacter);
     void QuitGame();
