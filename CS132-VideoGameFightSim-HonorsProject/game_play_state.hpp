@@ -7,6 +7,7 @@ This class is the game state that lets the game play.
 #define GAME_PLAY_STATE_HPP
 
 #include "game_state.hpp"
+#include "game_functions.hpp"
 
 class GamePlayState : public GameState
 {

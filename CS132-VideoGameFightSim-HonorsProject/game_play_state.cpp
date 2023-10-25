@@ -54,8 +54,8 @@ void GamePlayState::IdleMenu()
         // Implement the buy gear logic
         break;
     case 4:
-        // Implement the save game logic
-        // You can save the game state, player progress, and other relevant data here.
+        GameFunctions gameFunctions;
+        gameFunctions.SaveGame(gameManager->GetPlayerCharacter());
         break;
     case 5:
         // Return to the Main Menu

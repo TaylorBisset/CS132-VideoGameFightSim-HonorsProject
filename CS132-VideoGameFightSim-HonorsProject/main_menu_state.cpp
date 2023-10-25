@@ -43,7 +43,7 @@ void MainMenuState::HandleInput()
         }
         break;
     case 2:
-        // Continue a saved game
+        // Load a saved game
         break;
     case 3:
         gameFunctions.QuitGame();
