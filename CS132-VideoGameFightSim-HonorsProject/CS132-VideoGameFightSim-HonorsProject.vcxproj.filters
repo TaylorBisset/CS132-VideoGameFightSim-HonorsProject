@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Item\Armor">
       <UniqueIdentifier>{3c65d512-f763-4a9e-83e3-0e4b75aad29c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Item\Weapon">
+      <UniqueIdentifier>{86fa3d7a-8da9-4d08-b97e-2f4f11b2552d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_menu_state.h">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="armor.cpp">
       <Filter>Source Files\Item\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Source Files\Item\Weapon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

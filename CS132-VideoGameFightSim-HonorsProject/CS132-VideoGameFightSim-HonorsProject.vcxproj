@@ -136,6 +136,7 @@
     <ClCompile Include="main_menu_state.h" />
     <ClCompile Include="pause_menu_state.cpp" />
     <ClCompile Include="player_character.h" />
+    <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.h" />
