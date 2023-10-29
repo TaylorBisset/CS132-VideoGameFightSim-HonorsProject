@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Old Files">
-      <UniqueIdentifier>{d18adc10-a58c-4308-ad18-2a2ba1ca8d38}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Entity Header">
       <UniqueIdentifier>{2310791d-0433-4d2d-9a5e-038ca3813e2e}</UniqueIdentifier>
     </Filter>
@@ -37,32 +34,14 @@
     <Filter Include="Source Files\Item\Weapon">
       <UniqueIdentifier>{86fa3d7a-8da9-4d08-b97e-2f4f11b2552d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Entity Header\Item Header\Armor Header">
+      <UniqueIdentifier>{c30b2217-baa4-4093-95d0-73ef5bb892ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity Header\Item Header\Weapon Header">
+      <UniqueIdentifier>{c48f8567-ac91-46de-a925-56fed689511f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_menu_state.h">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="player_character.h">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game_functions.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game_manager.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game_play_state.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_menu_state.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pause_menu_state.cpp">
-      <Filter>Old Files</Filter>
-    </ClCompile>
     <ClCompile Include="armor.cpp">
       <Filter>Source Files\Item\Armor</Filter>
     </ClCompile>
@@ -71,54 +50,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="weapon_manager.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="armor.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="armor_manager.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="character.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="consumable.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="consumable_manager.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy_non_player_character.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="entity.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game_functions.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game_manager.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game_play_state.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="game_state.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="item.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="non_player_character.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pause_menu_state.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
-    <ClInclude Include="weapon.h">
-      <Filter>Old Files</Filter>
-    </ClInclude>
     <ClInclude Include="character.hpp">
       <Filter>Header Files\Entity Header\Character Header</Filter>
     </ClInclude>
@@ -129,10 +60,10 @@
       <Filter>Header Files\Entity Header</Filter>
     </ClInclude>
     <ClInclude Include="armor.hpp">
-      <Filter>Header Files\Entity Header\Item Header</Filter>
+      <Filter>Header Files\Entity Header\Item Header\Armor Header</Filter>
     </ClInclude>
     <ClInclude Include="weapon.hpp">
-      <Filter>Header Files\Entity Header\Item Header</Filter>
+      <Filter>Header Files\Entity Header\Item Header\Weapon Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
