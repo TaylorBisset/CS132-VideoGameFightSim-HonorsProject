@@ -15,7 +15,8 @@ public:
 		const string& type, int value,
 		int protection)
 		:
-		Item(name, description, type, value),
+		Item(name, description, 
+			type, value), 
 		protection(protection)
 	{
 		// Armor properties

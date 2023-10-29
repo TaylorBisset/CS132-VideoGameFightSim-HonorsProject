@@ -157,6 +157,7 @@
     <ClInclude Include="non_player_character.h" />
     <ClInclude Include="pause_menu_state.h" />
     <ClInclude Include="weapon.h" />
+    <ClInclude Include="weapon.hpp" />
     <ClInclude Include="weapon_manager.h" />
   </ItemGroup>
   <ItemGroup>

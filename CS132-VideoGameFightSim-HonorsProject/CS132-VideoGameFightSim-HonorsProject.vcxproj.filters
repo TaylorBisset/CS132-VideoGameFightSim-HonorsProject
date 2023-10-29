@@ -123,7 +123,10 @@
       <Filter>Header Files\Entity Header</Filter>
     </ClInclude>
     <ClInclude Include="armor.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Entity Header\Item Header</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.hpp">
+      <Filter>Header Files\Entity Header\Item Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
