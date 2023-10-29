@@ -151,6 +151,7 @@
     <ClInclude Include="game_play_state.h" />
     <ClInclude Include="game_state.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="item.hpp" />
     <ClInclude Include="non_player_character.h" />
     <ClInclude Include="pause_menu_state.h" />
     <ClInclude Include="weapon.h" />
