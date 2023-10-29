@@ -1,3 +1,4 @@
+// weapon.cpp
 #include "weapon.hpp"
 
 Weapon ironSword("Iron Sword", "Sharp Iron Sword.", "Weapon", 20, 10);
