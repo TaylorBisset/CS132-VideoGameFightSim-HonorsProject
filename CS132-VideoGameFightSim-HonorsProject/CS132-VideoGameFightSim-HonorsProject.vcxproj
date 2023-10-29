@@ -132,27 +132,27 @@
     <ClCompile Include="game_play_state.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main_menu_state.cpp" />
-    <ClCompile Include="main_menu_state.hpp" />
+    <ClCompile Include="main_menu_state.h" />
     <ClCompile Include="pause_menu_state.cpp" />
-    <ClCompile Include="player_character.hpp" />
+    <ClCompile Include="player_character.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="armor.hpp" />
-    <ClInclude Include="armor_manager.hpp" />
-    <ClInclude Include="character.hpp" />
-    <ClInclude Include="consumable.hpp" />
-    <ClInclude Include="consumable_manager.hpp" />
-    <ClInclude Include="enemy_non_player_character.hpp" />
-    <ClInclude Include="entity.hpp" />
-    <ClInclude Include="game_functions.hpp" />
-    <ClInclude Include="game_manager.hpp" />
-    <ClInclude Include="game_play_state.hpp" />
-    <ClInclude Include="game_state.hpp" />
-    <ClInclude Include="item.hpp" />
-    <ClInclude Include="non_player_character.hpp" />
-    <ClInclude Include="pause_menu_state.hpp" />
-    <ClInclude Include="weapon.hpp" />
-    <ClInclude Include="weapon_manager.hpp" />
+    <ClInclude Include="armor.h" />
+    <ClInclude Include="armor_manager.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="consumable.h" />
+    <ClInclude Include="consumable_manager.h" />
+    <ClInclude Include="enemy_non_player_character.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="game_functions.h" />
+    <ClInclude Include="game_manager.h" />
+    <ClInclude Include="game_play_state.h" />
+    <ClInclude Include="game_state.h" />
+    <ClInclude Include="item.h" />
+    <ClInclude Include="non_player_character.h" />
+    <ClInclude Include="pause_menu_state.h" />
+    <ClInclude Include="weapon.h" />
+    <ClInclude Include="weapon_manager.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="save_game.txt" />

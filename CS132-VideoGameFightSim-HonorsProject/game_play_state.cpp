@@ -30,7 +30,7 @@ void GamePlayState::Update()
 void GamePlayState::IdleMenu()
 {
     this_thread::sleep_for(chrono::seconds(1));
-    cout << "\n\tWelcome to Armamentarium, " << playerCharacter.getName() << endl << endl;
+    cout << "\n\tWelcome to the Armamentarium, " << playerCharacter.getName() << endl << endl;
     this_thread::sleep_for(chrono::seconds(1));
     cout << "Make your choice\n\n";
     cout << "1. Fight your next opponent\n";
@@ -57,6 +57,7 @@ void GamePlayState::IdleMenu()
         GameFunctions gameFunctions;
         gameFunctions.SaveGame(gameManager->GetPlayerCharacter());
         break;
+
     case 5:
         // Return to the Main Menu
         gameManager->ChangeState(new MainMenuState());

@@ -14,71 +14,34 @@ void GameFunctions::LoadGame(PlayerCharacter& playerCharacter)
 {
     const string saveFileName = "save_game.txt";
 
+    string playerName;
+
     ifstream loadFile(saveFileName);
-    if (loadFile.is_open())
+    if (loadFile.is_open()) 
     {
-        string label;
-        while (loadFile >> label)
-        {
-            if (label == "Player")
-            {
-                string name;
-                loadFile >> name; // Read the player name
-                playerCharacter.setName(name);
-            }
-            else if (label == "Level:")
-            {
-                int level;
-                loadFile >> level; // Read the player level
-                playerCharacter.setLevel(level);
-            }
-            else if (label == "Max")
-            {
-                int maxHealth;
-                loadFile >> maxHealth; // Read the max health
-                playerCharacter.setMaxHealth(maxHealth);
-            }
-            else if (label == "Current")
-            {
-                int currentHealth;
-                loadFile >> currentHealth; // Read the current health
-                playerCharacter.setCurrentHealth(currentHealth);
-            }
-            else if (label == "Attack:")
-            {
-                int attack;
-                loadFile >> attack; // Read the attack value
-                playerCharacter.setAttack(attack);
-            }
-            else if (label == "Defense:")
-            {
-                int defense;
-                loadFile >> defense; // Read the defense value
-                playerCharacter.setDefense(defense);
-            }
-            else if (label == "Experience:")
-            {
-                int experience;
-                loadFile >> experience; // Read the experience value
-                playerCharacter.setExperience(experience);
-            }
-            else if (label == "Coins:")
-            {
-                int coins;
-                loadFile >> coins; // Read the coins value
-                playerCharacter.setCoins(coins);
-            }
-        }
+        string playerName;
+        int level, maxHealth, currentHealth, attack, defense, experience, coins;
+
+        loadFile >> playerName >> level >> maxHealth >> currentHealth >> attack >> defense >> experience >> coins;
+
+        playerCharacter.setName(playerName);
+        playerCharacter.setLevel(level);
+        playerCharacter.setMaxHealth(maxHealth);
+        playerCharacter.setCurrentHealth(currentHealth);
+        playerCharacter.setAttack(attack);
+        playerCharacter.setDefense(defense);
+        playerCharacter.setExperience(experience);
+        playerCharacter.setCoins(coins);
 
         loadFile.close();
-        cout << "Game loaded successfully\n";
-        this_thread::sleep_for(chrono::seconds(1));
+
+        cout << "Game loaded successfully.\nWelcome Back!\n\n";
     }
-}
-
-void GameFunctions::PauseGame()
-{
-
+    else 
+    {
+        cout << "No saved game found.\n";
+    }
+    this_thread::sleep_for(chrono::seconds(1));
 }
 
 void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
@@ -88,19 +51,25 @@ void GameFunctions::SaveGame(const PlayerCharacter& playerCharacter)
     ofstream saveFile(saveFileName);
     if (saveFile.is_open())
     {
-        saveFile << "Player Name: "     << playerCharacter.getName() << endl;
-        saveFile << "Level: "           << playerCharacter.getLevel() << endl;
-        saveFile << "Max Health: "      << playerCharacter.getMaxHealth() << endl;
-        saveFile << "Current Health: "  << playerCharacter.getCurrentHealth() << endl;
-        saveFile << "Attack: "          << playerCharacter.getAttack() << endl;
-        saveFile << "Defense: "         << playerCharacter.getDefense() << endl;
-        saveFile << "Experience: "      << playerCharacter.getExperience() << endl;
-        saveFile << "Coins: "           << playerCharacter.getCoins() << endl;
+        saveFile
+            << playerCharacter.getName() << ' '
+            << playerCharacter.getLevel() << ' '
+            << playerCharacter.getMaxHealth() << ' '
+            << playerCharacter.getAttack() << ' '
+            << playerCharacter.getDefense() << ' '
+            << playerCharacter.getExperience() << ' '
+            << playerCharacter.getCoins() << '\n';
 
         saveFile.close();
         cout << "Game saved successfully\n";
-        this_thread::sleep_for(chrono::seconds(1));
+        
     }
+    this_thread::sleep_for(chrono::seconds(1));
+}
+
+void GameFunctions::PauseGame()
+{
+
 }
 
 void GameFunctions::QuitGame()
@@ -115,5 +84,6 @@ void GameFunctions::QuitGame()
     cout << "Press any key to continue . . . ";
     cin.get();
 #endif
+
     exit(0);
 }

@@ -13,21 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Old Files">
+      <UniqueIdentifier>{d18adc10-a58c-4308-ad18-2a2ba1ca8d38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity Header">
+      <UniqueIdentifier>{2310791d-0433-4d2d-9a5e-038ca3813e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity Header\Character Header">
+      <UniqueIdentifier>{d1c790b5-6d2d-4adb-b264-f17ac797865e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity Header\Item Header">
+      <UniqueIdentifier>{6c290adb-9f38-435e-8edc-e68ed45fc543}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="player_character.hpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_menu_state.hpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_menu_state.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pause_menu_state.cpp">
+    <ClCompile Include="game_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game_manager.cpp">
@@ -36,58 +36,70 @@
     <ClCompile Include="game_play_state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game_functions.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_menu_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pause_menu_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_menu_state.h">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player_character.h">
+      <Filter>Old Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="entity.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="weapon_manager.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="character.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="armor.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="non_player_character.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="armor_manager.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="enemy_non_player_character.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="character.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="item.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="consumable.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="armor.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="consumable_manager.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="weapon.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="enemy_non_player_character.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="weapon_manager.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="entity.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="armor_manager.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="game_functions.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="consumable.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="game_manager.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="consumable_manager.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="game_play_state.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="game_state.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="game_state.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="game_play_state.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="item.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="pause_menu_state.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="non_player_character.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="game_manager.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="pause_menu_state.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
-    <ClInclude Include="game_functions.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="weapon.h">
+      <Filter>Old Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
