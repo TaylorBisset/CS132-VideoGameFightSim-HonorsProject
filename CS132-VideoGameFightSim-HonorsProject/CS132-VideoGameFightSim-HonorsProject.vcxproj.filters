@@ -48,6 +48,9 @@
     <ClCompile Include="weapon.cpp">
       <Filter>Source Files\Item\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.hpp">
