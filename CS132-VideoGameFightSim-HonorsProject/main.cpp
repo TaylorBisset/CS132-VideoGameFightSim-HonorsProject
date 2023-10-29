@@ -17,11 +17,14 @@ main.cpp
 #include <iostream>
 #include <fstream>
 
+#include "character.hpp"
+
 using namespace std;
 
 int main()
 {
-	cout << "Welcome to the Armamentarium\n";
+	cout << endl;
+	cout << "Welcome to the Armamentarium!\n";
 	cout << "What would you like to do?\n";
 	cout << "1  New Game\n";
 	cout << "2  Load Game\n";
@@ -29,15 +32,23 @@ int main()
 	cout << endl;
 
 	int choice;
+	Character playerCharacter;
+	string name;
 	while (true)
 	{
 		cin >> choice;
 		switch (choice)
 		{
 		case 1:
+			cout << endl;
+			cout << "What is your name, warrior?\n";
+			cin >> name;
+			cin.ignore();
+			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0);
 
 			break;
 		case 2:
+			cout << endl;
 
 			break;
 		case 3:
@@ -52,6 +63,7 @@ int main()
 #endif
 			return 0;
 		default:
+			cout << endl;
 			cout << "Invalid choice.\nPlease select a valid option.\n\n";
 			break;
 		}

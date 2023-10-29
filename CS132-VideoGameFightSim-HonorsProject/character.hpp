@@ -11,6 +11,14 @@ This class is the main character class from which all characters will inherit.
 class Character : public Entity
 {
 public:
+	Character() 
+		: 
+		Entity("DefaultName", "DefaultDescription"),
+		maxHealth(10), currentHealth(10),
+		attack(2), baseAttack(2),
+		defense(2), baseDefense(2),
+		level(1), experience(0) {}
+
 	Character(const string& name, const string& description,
 		int maxHealth, int currentHealth,
 		int attack, int baseAttack,
@@ -60,11 +68,11 @@ public:
 		return attack;
 	}
 	// Base Attack
-	void setBaseAttack(int newBaseAttack) 
+	void setBaseAttack(int newBaseAttack)
 	{
 		baseAttack = newBaseAttack;
 	}
-	int getBaseAttack() const 
+	int getBaseAttack() const
 	{
 		return baseAttack;
 	}
