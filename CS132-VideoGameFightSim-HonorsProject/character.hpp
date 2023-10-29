@@ -29,7 +29,7 @@ public:
 	// Max Health
 	void setMaxHealth(int newMaxHealth)
 	{
-		maxHealth = newMaxHealth;
+		maxHealth = level * 10;
 	}
 	int getMaxHealth() const
 	{
@@ -40,6 +40,10 @@ public:
 	void setCurrentHealth(int newCurrentHealth)
 	{
 		currentHealth = newCurrentHealth;
+		if (currentHealth >= maxHealth)
+		{
+			currentHealth = maxHealth;
+		}
 	}
 	int getCurrentHealth() const
 	{

@@ -27,28 +27,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game_functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game_manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game_play_state.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_menu_state.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pause_menu_state.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main_menu_state.h">
       <Filter>Old Files</Filter>
     </ClCompile>
     <ClCompile Include="player_character.h">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game_functions.cpp">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game_manager.cpp">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game_play_state.cpp">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_menu_state.cpp">
+      <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pause_menu_state.cpp">
       <Filter>Old Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -109,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="entity.hpp">
       <Filter>Header Files\Entity Header</Filter>
+    </ClInclude>
+    <ClInclude Include="armor.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.h" />
+    <ClInclude Include="armor.hpp" />
     <ClInclude Include="armor_manager.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="character.hpp" />
