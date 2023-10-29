@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="armor.cpp" />
     <ClCompile Include="game_functions.cpp" />
     <ClCompile Include="game_manager.cpp" />
     <ClCompile Include="game_play_state.cpp" />

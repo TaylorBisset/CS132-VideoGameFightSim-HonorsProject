@@ -25,6 +25,15 @@
     <Filter Include="Header Files\Entity Header\Item Header">
       <UniqueIdentifier>{6c290adb-9f38-435e-8edc-e68ed45fc543}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Save File">
+      <UniqueIdentifier>{9bab490b-ed98-4240-b6ab-3dc033600b2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Item">
+      <UniqueIdentifier>{4b5e79d1-c4b1-41a0-85dc-ae4adfeea6be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Item\Armor">
+      <UniqueIdentifier>{3c65d512-f763-4a9e-83e3-0e4b75aad29c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_menu_state.h">
@@ -50,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="pause_menu_state.cpp">
       <Filter>Old Files</Filter>
+    </ClCompile>
+    <ClCompile Include="armor.cpp">
+      <Filter>Source Files\Item\Armor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +127,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="save_game.txt" />
+    <Text Include="save_game.txt">
+      <Filter>Source Files\Save File</Filter>
+    </Text>
   </ItemGroup>
 </Project>
