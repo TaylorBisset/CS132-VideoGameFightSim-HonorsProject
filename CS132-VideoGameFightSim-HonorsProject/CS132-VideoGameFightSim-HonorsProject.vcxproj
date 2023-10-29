@@ -140,6 +140,7 @@
     <ClInclude Include="armor.h" />
     <ClInclude Include="armor_manager.h" />
     <ClInclude Include="character.h" />
+    <ClInclude Include="character.hpp" />
     <ClInclude Include="consumable.h" />
     <ClInclude Include="consumable_manager.h" />
     <ClInclude Include="enemy_non_player_character.h" />

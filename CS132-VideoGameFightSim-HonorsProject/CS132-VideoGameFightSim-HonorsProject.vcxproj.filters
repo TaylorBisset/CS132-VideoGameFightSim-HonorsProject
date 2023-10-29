@@ -104,6 +104,9 @@
     <ClInclude Include="entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="character.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="save_game.txt" />

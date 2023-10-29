@@ -15,11 +15,13 @@ class Entity
 {
 public:
 	Entity(const string& name, const string& description)
-		: name(name), description(description)
+		:
+		name(name), description(description)
 	{
 		// Entity properties
 	}
 
+	// Name
 	void setName(const string& newName)
 	{
 		name = newName;
@@ -29,13 +31,14 @@ public:
 		return name;
 	}
 
-	string getDescription() const
-	{
-		return description;
-	}
+	// Description
 	void setDescription(const string& newDescription)
 	{
 		description = newDescription;
+	}
+	string getDescription() const
+	{
+		return description;
 	}
 
 private:
