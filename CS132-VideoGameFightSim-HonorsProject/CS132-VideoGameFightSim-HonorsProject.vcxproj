@@ -144,6 +144,7 @@
     <ClInclude Include="consumable_manager.h" />
     <ClInclude Include="enemy_non_player_character.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="entity.hpp" />
     <ClInclude Include="game_functions.h" />
     <ClInclude Include="game_manager.h" />
     <ClInclude Include="game_play_state.h" />
