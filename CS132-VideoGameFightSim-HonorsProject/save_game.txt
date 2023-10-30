@@ -1,1 +1,1 @@
-Taylor A capable warrior. 10 10 2 2 2 2 1 0 0
+Taylor A capable warrior. 100 100 20 20 20 20 10 100 1000

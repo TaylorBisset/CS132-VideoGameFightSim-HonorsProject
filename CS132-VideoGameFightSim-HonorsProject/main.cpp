@@ -25,6 +25,7 @@ using namespace std;
 void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
 void PrintPlayerStats(const Character& playerCharacter);
+void sleep(int seconds);
 
 int main()
 {
@@ -52,13 +53,14 @@ int main()
 			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0, 0);
 			cout << endl;
 			cout << "Welcome, " << name << "!\n";
-			this_thread::sleep_for(chrono::seconds(1));
+			sleep(1);
 
-			cout << "I hope you find your experience here... entertaining.\n";
-			this_thread::sleep_for(chrono::seconds(2));
+			cout << "I hope you find your experience here";
+			sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "entertaining.\n";
+			sleep(2);
 
 			cout << "Here's 10 coins to gear up with.\n";
-			this_thread::sleep_for(chrono::seconds(2));
+			sleep(2);
 
 			// Add 10 coins
 			SaveGame(playerCharacter, "save_game.txt");
@@ -67,7 +69,7 @@ int main()
 		case 2:
 			cout << endl;
 			cout << "Loading game...\n";
-			this_thread::sleep_for(chrono::seconds(1));
+			sleep(1);
 
 			LoadGame(playerCharacter, "save_game.txt");
 			PrintPlayerStats(playerCharacter);
@@ -113,7 +115,7 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 	{
 		cout << "\nUnable to open the file for saving.\n";
 	}
-	this_thread::sleep_for(chrono::seconds(1));
+	sleep(1);
 }
 
 void LoadGame(Character& playerCharacter, const string& filename)
@@ -148,7 +150,7 @@ void LoadGame(Character& playerCharacter, const string& filename)
 	{
 		cout << "\nUnable to open the file for loading.\n";
 	}
-	this_thread::sleep_for(chrono::seconds(1));
+	sleep(1);
 }
 
 void PrintPlayerStats(const Character& playerCharacter)
@@ -156,17 +158,22 @@ void PrintPlayerStats(const Character& playerCharacter)
 	cout << endl;
 	cout << playerCharacter.getName() << endl;
 	cout << playerCharacter.getDescription() << endl << endl;
-	cout << "Max Health:     "	<< playerCharacter.getMaxHealth() << endl;
-	cout << "Current Health: "	<< playerCharacter.getCurrentHealth() << endl;
-	cout << "Attack:         "	<< playerCharacter.getAttack() << endl;
-	cout << "Base Attack:    "	<< playerCharacter.getBaseAttack() << endl;
-	cout << "Defense:        "	<< playerCharacter.getDefense() << endl;
-	cout << "Base Defense:   "	<< playerCharacter.getBaseDefense() << endl;
-	cout << "Level:          "	<< playerCharacter.getLevel() << endl;
-	cout << "Experience:     "	<< playerCharacter.getExperience() << endl;
-	cout << "Coins:          "	<< playerCharacter.getCoins() << endl;
+	cout << "Max Health:     " << playerCharacter.getMaxHealth() << endl;
+	cout << "Current Health: " << playerCharacter.getCurrentHealth() << endl;
+	cout << "Attack:         " << playerCharacter.getAttack() << endl;
+	cout << "Base Attack:    " << playerCharacter.getBaseAttack() << endl;
+	cout << "Defense:        " << playerCharacter.getDefense() << endl;
+	cout << "Base Defense:   " << playerCharacter.getBaseDefense() << endl;
+	cout << "Level:          " << playerCharacter.getLevel() << endl;
+	cout << "Experience:     " << playerCharacter.getExperience() << endl;
+	cout << "Coins:          " << playerCharacter.getCoins() << endl;
 	cout << endl;
-	this_thread::sleep_for(chrono::seconds(1));
+	sleep(1);
+}
+
+void sleep(int seconds) 
+{
+	std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
 /*
