@@ -24,6 +24,7 @@ using namespace std;
 
 void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
+void PrintPlayerStats(const Character& playerCharacter);
 
 int main()
 {
@@ -51,14 +52,25 @@ int main()
 			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0, 0);
 			cout << endl;
 			cout << "Welcome, " << name << "!\n";
+			this_thread::sleep_for(chrono::seconds(1));
+
 			cout << "I hope you find your experience here... entertaining.\n";
+			this_thread::sleep_for(chrono::seconds(2));
+
 			cout << "Here's 10 coins to gear up with.\n";
+			this_thread::sleep_for(chrono::seconds(2));
+
+			// Add 10 coins
+			SaveGame(playerCharacter, "save_game.txt");
+			PrintPlayerStats(playerCharacter);
 			break;
 		case 2:
 			cout << endl;
 			cout << "Loading game...\n";
 			this_thread::sleep_for(chrono::seconds(1));
-			LoadGame(playerCharacter, "savefile.txt");
+
+			LoadGame(playerCharacter, "save_game.txt");
+			PrintPlayerStats(playerCharacter);
 			// Initiate gameplay
 			break;
 		case 3:
@@ -86,7 +98,6 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 
 	if (fout.is_open())
 	{
-		// Save character attributes to the file
 		fout << playerCharacter.getName()		<< " " << playerCharacter.getDescription()	 << " ";
 		fout << playerCharacter.getMaxHealth()	<< " " << playerCharacter.getCurrentHealth() << " ";
 		fout << playerCharacter.getAttack()		<< " " << playerCharacter.getBaseAttack()	 << " ";
@@ -94,7 +105,6 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 		fout << playerCharacter.getLevel()		<< " " << playerCharacter.getExperience()	 << " ";
 		fout << playerCharacter.getCoins();
 
-		// Close the file
 		fout.close();
 
 		cout << "\nGame saved successfully.\n";
@@ -103,6 +113,7 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 	{
 		cout << "\nUnable to open the file for saving.\n";
 	}
+	this_thread::sleep_for(chrono::seconds(1));
 }
 
 void LoadGame(Character& playerCharacter, const string& filename)
@@ -137,6 +148,25 @@ void LoadGame(Character& playerCharacter, const string& filename)
 	{
 		cout << "\nUnable to open the file for loading.\n";
 	}
+	this_thread::sleep_for(chrono::seconds(1));
+}
+
+void PrintPlayerStats(const Character& playerCharacter)
+{
+	cout << endl;
+	cout << playerCharacter.getName() << endl;
+	cout << playerCharacter.getDescription() << endl << endl;
+	cout << "Max Health:     "	<< playerCharacter.getMaxHealth() << endl;
+	cout << "Current Health: "	<< playerCharacter.getCurrentHealth() << endl;
+	cout << "Attack:         "	<< playerCharacter.getAttack() << endl;
+	cout << "Base Attack:    "	<< playerCharacter.getBaseAttack() << endl;
+	cout << "Defense:        "	<< playerCharacter.getDefense() << endl;
+	cout << "Base Defense:   "	<< playerCharacter.getBaseDefense() << endl;
+	cout << "Level:          "	<< playerCharacter.getLevel() << endl;
+	cout << "Experience:     "	<< playerCharacter.getExperience() << endl;
+	cout << "Coins:          "	<< playerCharacter.getCoins() << endl;
+	cout << endl;
+	this_thread::sleep_for(chrono::seconds(1));
 }
 
 /*
