@@ -68,6 +68,9 @@
     <ClInclude Include="weapon.hpp">
       <Filter>Header Files\Entity Header\Item Header\Weapon Header</Filter>
     </ClInclude>
+    <ClInclude Include="game_functions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="save_game.txt">
