@@ -100,11 +100,11 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 
 	if (fout.is_open())
 	{
-		fout << playerCharacter.getName()		<< " " << playerCharacter.getDescription()	 << " ";
-		fout << playerCharacter.getMaxHealth()	<< " " << playerCharacter.getCurrentHealth() << " ";
-		fout << playerCharacter.getAttack()		<< " " << playerCharacter.getBaseAttack()	 << " ";
-		fout << playerCharacter.getDefense()	<< " " << playerCharacter.getBaseDefense()	 << " ";
-		fout << playerCharacter.getLevel()		<< " " << playerCharacter.getExperience()	 << " ";
+		fout << playerCharacter.getName()		<< endl << playerCharacter.getDescription()	  << endl;
+		fout << playerCharacter.getMaxHealth()	<< endl << playerCharacter.getCurrentHealth() << endl;
+		fout << playerCharacter.getAttack()		<< endl << playerCharacter.getBaseAttack()	  << endl;
+		fout << playerCharacter.getDefense()	<< endl << playerCharacter.getBaseDefense()	  << endl;
+		fout << playerCharacter.getLevel()		<< endl << playerCharacter.getExperience()	  << endl;
 		fout << playerCharacter.getCoins();
 
 		fout.close();
@@ -127,7 +127,9 @@ void LoadGame(Character& playerCharacter, const string& filename)
 		int maxHealth, currentHealth, attack, baseAttack;
 		int defense, baseDefense, level, experience, coins;
 
-		fin >> name   >> description >> maxHealth >> currentHealth;
+		getline(fin, name);
+		getline(fin, description);
+		fin >> maxHealth >> currentHealth;
 		fin >> attack >> baseAttack  >> defense   >> baseDefense;
 		fin >> level  >> experience  >> coins;
 
