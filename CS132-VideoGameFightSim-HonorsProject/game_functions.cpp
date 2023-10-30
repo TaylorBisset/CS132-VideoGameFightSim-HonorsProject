@@ -32,11 +32,15 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 	if (fout.is_open())
 	{
 		fout << playerCharacter.getName() << endl << playerCharacter.getDescription() << endl;
-		fout << playerCharacter.getMaxHealth() << endl << playerCharacter.getCurrentHealth() << endl;
-		fout << playerCharacter.getAttack() << endl << playerCharacter.getBaseAttack() << endl;
-		fout << playerCharacter.getDefense() << endl << playerCharacter.getBaseDefense() << endl;
+		
 		fout << playerCharacter.getLevel() << endl << playerCharacter.getExperience() << endl;
 		fout << playerCharacter.getCoins() << endl;
+		
+		fout << playerCharacter.getMaxHealth() << endl << playerCharacter.getCurrentHealth() << endl;
+		
+		fout << playerCharacter.getAttack() << endl << playerCharacter.getBaseAttack() << endl;
+		fout << playerCharacter.getDefense() << endl << playerCharacter.getBaseDefense() << endl;
+		
 
 		fout.close();
 
@@ -60,21 +64,21 @@ void LoadGame(Character& playerCharacter, const string& filename)
 
 		getline(fin, name);
 		getline(fin, description);
+		fin >> level >> experience >> coins;
 		fin >> maxHealth >> currentHealth;
 		fin >> attack >> baseAttack >> defense >> baseDefense;
-		fin >> level >> experience >> coins;
 
 		playerCharacter.setName(name);
 		playerCharacter.setDescription(description);
+		playerCharacter.setLevel(level);
+		playerCharacter.setExperience(experience);
+		playerCharacter.setCoins(coins);
 		playerCharacter.setMaxHealth(maxHealth);
 		playerCharacter.setCurrentHealth(currentHealth);
 		playerCharacter.setAttack(attack);
 		playerCharacter.setBaseAttack(baseAttack);
 		playerCharacter.setDefense(defense);
 		playerCharacter.setBaseDefense(baseDefense);
-		playerCharacter.setLevel(level);
-		playerCharacter.setExperience(experience);
-		playerCharacter.setCoins(coins);
 
 		fin.close();
 		cout << "\nGame loaded successfully.\n";
@@ -91,15 +95,18 @@ void PrintPlayerStats(const Character& playerCharacter)
 	cout << endl;
 	cout << playerCharacter.getName() << endl;
 	cout << playerCharacter.getDescription() << endl << endl;
+	cout << "Level:          " << playerCharacter.getLevel() << endl;
+	cout << "Experience:     " << playerCharacter.getExperience() << endl;
+	cout << "Coins:          " << playerCharacter.getCoins() << endl << endl;
+
 	cout << "Max Health:     " << playerCharacter.getMaxHealth() << endl;
-	cout << "Current Health: " << playerCharacter.getCurrentHealth() << endl;
+	cout << "Current Health: " << playerCharacter.getCurrentHealth() << endl << endl;
+
 	cout << "Attack:         " << playerCharacter.getAttack() << endl;
 	cout << "Base Attack:    " << playerCharacter.getBaseAttack() << endl;
 	cout << "Defense:        " << playerCharacter.getDefense() << endl;
 	cout << "Base Defense:   " << playerCharacter.getBaseDefense() << endl;
-	cout << "Level:          " << playerCharacter.getLevel() << endl;
-	cout << "Experience:     " << playerCharacter.getExperience() << endl;
-	cout << "Coins:          " << playerCharacter.getCoins() << endl;
+	
 	cout << endl;
 	sleep(1);
 }
