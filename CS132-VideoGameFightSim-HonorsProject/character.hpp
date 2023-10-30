@@ -125,6 +125,16 @@ public:
 	{
 		return experience;
 	}
+	void modifyExperience(int experiencePoints)
+	{
+		experience += experiencePoints;
+		if (experience >= (level * 10))
+		{
+			level++;
+			maxHealth += 10;
+			experience = 0;
+		}
+	}
 
 	// Coins
 	void setCoins(int newCoins)

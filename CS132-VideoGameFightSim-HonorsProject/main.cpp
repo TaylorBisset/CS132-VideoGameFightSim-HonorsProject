@@ -183,10 +183,6 @@ void sleep(int seconds)
 Entity
  |
  |-Character
- |  |
- |  |--Player_Character
- |  |
- |  |--Non_Player_Character
  |
  |-Item
 	|
