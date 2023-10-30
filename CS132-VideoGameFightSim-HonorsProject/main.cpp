@@ -16,10 +16,13 @@ main.cpp
 
 #include <iostream>
 #include <fstream>
+#include <thread>
 
 #include "character.hpp"
 
 using namespace std;
+
+void LoadGame(Character& playerCharacter, const string& filename);
 
 int main()
 {
@@ -52,7 +55,10 @@ int main()
 			break;
 		case 2:
 			cout << endl;
-
+			cout << "Loading game...\n";
+			this_thread::sleep_for(chrono::seconds(1));
+			LoadGame(playerCharacter, "savefile.txt");
+			// Initiate gameplay
 			break;
 		case 3:
 			// OS independent program termination sequence. 
@@ -70,6 +76,40 @@ int main()
 			cout << "Invalid choice.\nPlease select a valid option.\n\n";
 			break;
 		}
+	}
+}
+
+void LoadGame(Character& playerCharacter, const string& filename)
+{
+	ifstream fin(filename);
+	if (fin.is_open())
+	{
+		string name, description;
+		int maxHealth, currentHealth, attack, baseAttack;
+		int defense, baseDefense, level, experience, coins;
+
+		fin >> name   >> description >> maxHealth >> currentHealth;
+		fin >> attack >> baseAttack  >> defense   >> baseDefense;
+		fin >> level  >> experience  >> coins;
+
+		playerCharacter.setName(name);
+		playerCharacter.setDescription(description);
+		playerCharacter.setMaxHealth(maxHealth);
+		playerCharacter.setCurrentHealth(currentHealth);
+		playerCharacter.setAttack(attack);
+		playerCharacter.setBaseAttack(baseAttack);
+		playerCharacter.setDefense(defense);
+		playerCharacter.setBaseDefense(baseDefense);
+		playerCharacter.setLevel(level);
+		playerCharacter.setExperience(experience);
+		playerCharacter.setCoins(coins);
+
+		fin.close();
+		cout << "Game loaded successfully.\n";
+	}
+	else
+	{
+		cout << "Unable to open the file for loading.\n";
 	}
 }
 
