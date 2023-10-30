@@ -55,16 +55,18 @@ int main()
 			cout << "Welcome, " << name << "!\n";
 			sleep(1);
 
-			cout << "I hope you find your experience here";
-			sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "entertaining.\n";
+			cout << "I hope you find your experience here to be";
+			sleep(2); cout << "."; sleep(1); cout << "."; sleep(1); 
+			cout << "."; sleep(1); cout << " entertaining.\n";
 			sleep(2);
 
 			cout << "Here's 10 coins to gear up with.\n";
+			sleep(1);
+			playerCharacter.modifyCoins(10);
 			sleep(2);
-
-			// Add 10 coins
-			SaveGame(playerCharacter, "save_game.txt");
 			PrintPlayerStats(playerCharacter);
+			sleep(2);
+			// Initiate gameplay
 			break;
 		case 2:
 			cout << endl;
@@ -73,6 +75,7 @@ int main()
 
 			LoadGame(playerCharacter, "save_game.txt");
 			PrintPlayerStats(playerCharacter);
+			sleep(2);
 			// Initiate gameplay
 			break;
 		case 3:

@@ -131,7 +131,7 @@ public:
 		if (experience >= (level * 10))
 		{
 			level++;
-			maxHealth += 10;
+			maxHealth = level * 10;
 			experience = 0;
 		}
 	}
@@ -148,6 +148,11 @@ public:
 	void modifyCoins(int coinChange)
 	{
 		coins += coinChange;
+		if (coinChange > 0)
+		{
+			cout << "You received " << coinChange << " coins.\n";
+		}
+		cout << "Current coin count: " << coins << endl;
 	}
 
 private:
