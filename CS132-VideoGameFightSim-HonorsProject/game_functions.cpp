@@ -112,7 +112,7 @@ void GameMenu()
 	{
 		cout << endl;
 		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-		cout << endl;
+		cout << endl << endl;
 
 		cout << "Welcome to the Armamentarium!\n\n";
 		cout << "What would you like to do?\n";
@@ -122,7 +122,7 @@ void GameMenu()
 
 		cout << endl;
 		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-		cout << endl;
+		cout << endl << endl;
 
 		int choice;
 		string name;
@@ -142,16 +142,20 @@ void GameMenu()
 
 			cout << "I hope you find your experience here to be";
 			sleep(2); cout << "."; sleep(1); cout << "."; sleep(1);
+
 			cout << "."; sleep(1); cout << " entertaining.\n";
 			sleep(2);
 
 			cout << "Here's 10 coins to gear up with.\n";
 			sleep(1);
+
 			playerCharacter.modifyCoins(10);
 			sleep(2);
+
 			PrintPlayerStats(playerCharacter);
 			sleep(2);
-			// Initiate gameplay
+
+			IdleMenu(playerCharacter);
 			break;
 		case 2:
 			cout << endl;
@@ -161,7 +165,8 @@ void GameMenu()
 			LoadGame(playerCharacter, "save_game.txt");
 			PrintPlayerStats(playerCharacter);
 			sleep(2);
-			// Initiate gameplay
+
+			IdleMenu(playerCharacter);
 			break;
 		case 3:
 			QuitGame();
@@ -174,13 +179,11 @@ void GameMenu()
 	}
 }
 
-void IdleMenu()
+void IdleMenu(Character& playerCharacter)
 {
-	Character playerCharacter;
-
 	while (true)
 	{
-		cout << "\n\tWelcome to the Armamentarium\n\n";
+		cout << "\nWelcome, " << playerCharacter.getName() << endl << endl;
 
 		cout << "Make your choice\n\n";
 

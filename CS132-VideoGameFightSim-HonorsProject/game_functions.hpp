@@ -15,5 +15,6 @@ void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
 void PrintPlayerStats(const Character& playerCharacter);
 void GameMenu();
+void IdleMenu(Character& playerCharacter);
 
 #endif // GAME_FUNCTIONS_HPP

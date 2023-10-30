@@ -37,7 +37,7 @@ public:
 	// Max Health
 	void setMaxHealth(int newMaxHealth)
 	{
-		maxHealth = level * 10;
+		maxHealth = newMaxHealth;
 	}
 	int getMaxHealth() const
 	{
@@ -56,6 +56,12 @@ public:
 	int getCurrentHealth() const
 	{
 		return currentHealth;
+	}
+	//Modify Current Health
+	void modifyCurrentHealth(int healthChange)
+	{
+		currentHealth += healthChange;
+		setCurrentHealth(currentHealth);
 	}
 
 	// Attack
@@ -80,6 +86,7 @@ public:
 	void modifyAttack(int attackBonus)
 	{
 		attack = baseAttack + attackBonus;
+		setAttack(attack);
 	}
 
 	// Defense
@@ -104,6 +111,7 @@ public:
 	void modifyDefense(int defenseBonus)
 	{
 		defense = baseDefense + defenseBonus;
+		setDefense(defense);
 	}
 
 	// Level
@@ -131,9 +139,12 @@ public:
 		if (experience >= (level * 10))
 		{
 			level++;
+			setLevel(level);
+			cout << "Congratulations!\nYou are now level " << level << endl;
 			maxHealth = level * 10;
-			experience = 0;
+			setMaxHealth(maxHealth);
 		}
+		setExperience(experience);
 	}
 
 	// Coins
