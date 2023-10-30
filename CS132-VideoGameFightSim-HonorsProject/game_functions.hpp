@@ -10,6 +10,7 @@ using namespace std;
 #include "character.hpp"
 
 void sleep(int seconds);
+void QuitGame();
 void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
 void PrintPlayerStats(const Character& playerCharacter);

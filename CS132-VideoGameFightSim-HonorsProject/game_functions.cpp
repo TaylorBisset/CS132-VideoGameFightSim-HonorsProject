@@ -11,6 +11,20 @@ void sleep(int seconds)
 	std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
+void QuitGame()
+{
+	// OS independent program termination sequence. 
+#ifdef _WIN32
+	cout << endl;
+	system("pause");
+#else
+	cout << endl;
+	cout << "Press any key to continue . . . ";
+	cin.get();
+#endif
+	exit(0);
+}
+
 void SaveGame(const Character& playerCharacter, const string& filename)
 {
 	ofstream fout(filename);

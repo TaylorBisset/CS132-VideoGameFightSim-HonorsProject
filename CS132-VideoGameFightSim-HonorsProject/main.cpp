@@ -73,15 +73,7 @@ int main()
 			// Initiate gameplay
 			break;
 		case 3:
-			// OS independent program termination sequence. 
-#ifdef _WIN32
-			cout << endl;
-			system("pause");
-#else
-			cout << endl;
-			cout << "Press any key to continue . . . ";
-			cin.get();
-#endif
+			QuitGame();
 			return 0;
 		default:
 			cout << endl;
