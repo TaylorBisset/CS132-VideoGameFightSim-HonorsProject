@@ -3,10 +3,13 @@
 #ifndef GAME_FUNCTIONS_HPP
 #define GAME_FUNCTIONS_HPP
 
+#include "character.hpp"
+
 using namespace std;
 
 #include "character.hpp"
 
+void sleep(int seconds);
 void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
 void PrintPlayerStats(const Character& playerCharacter);
