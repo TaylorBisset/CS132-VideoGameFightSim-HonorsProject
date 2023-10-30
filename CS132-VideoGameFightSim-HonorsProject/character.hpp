@@ -145,6 +145,10 @@ public:
 	{
 		return coins;
 	}
+	void modifyCoins(int coinChange)
+	{
+		coins += coinChange;
+	}
 
 private:
 	int maxHealth;
