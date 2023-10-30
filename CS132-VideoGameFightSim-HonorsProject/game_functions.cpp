@@ -36,7 +36,7 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 		fout << playerCharacter.getAttack() << endl << playerCharacter.getBaseAttack() << endl;
 		fout << playerCharacter.getDefense() << endl << playerCharacter.getBaseDefense() << endl;
 		fout << playerCharacter.getLevel() << endl << playerCharacter.getExperience() << endl;
-		fout << playerCharacter.getCoins();
+		fout << playerCharacter.getCoins() << endl;
 
 		fout.close();
 
@@ -168,6 +168,55 @@ void GameMenu()
 			return;
 		default:
 			cout << endl;
+			cout << "Invalid choice.\nPlease select a valid option.\n\n";
+			break;
+		}
+	}
+}
+
+void IdleMenu()
+{
+	Character playerCharacter;
+
+	while (true)
+	{
+		cout << "\n\tWelcome to the Armamentarium\n\n";
+
+		cout << "Make your choice\n\n";
+
+		cout << "1  Fight your next opponent\n";
+		cout << "2  View stats\n";
+		cout << "3  Buy gear\n";
+		cout << "4  Save the game\n";
+		cout << "5  Exit to Main Menu\n";
+
+		int choice;
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 1:
+			// Implement the fight logic
+			break;
+		case 2:
+			sleep(1);
+			PrintPlayerStats(playerCharacter);
+			sleep(1);
+			break;
+		case 3:
+			// Implement the buy gear logic
+			break;
+		case 4:
+			sleep(1);
+			SaveGame(playerCharacter, "save_game.txt");
+			sleep(1);
+			break;
+		case 5:
+			sleep(1);
+			cout << "Returning to Main Menu.\n";
+			sleep(1);
+			return;
+		default:
 			cout << "Invalid choice.\nPlease select a valid option.\n\n";
 			break;
 		}
