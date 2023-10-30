@@ -22,6 +22,7 @@ main.cpp
 
 using namespace std;
 
+void SaveGame(const Character& playerCharacter, const string& filename);
 void LoadGame(Character& playerCharacter, const string& filename);
 
 int main()
@@ -79,6 +80,31 @@ int main()
 	}
 }
 
+void SaveGame(const Character& playerCharacter, const string& filename)
+{
+	ofstream fout(filename);
+
+	if (fout.is_open())
+	{
+		// Save character attributes to the file
+		fout << playerCharacter.getName()		<< " " << playerCharacter.getDescription()	 << " ";
+		fout << playerCharacter.getMaxHealth()	<< " " << playerCharacter.getCurrentHealth() << " ";
+		fout << playerCharacter.getAttack()		<< " " << playerCharacter.getBaseAttack()	 << " ";
+		fout << playerCharacter.getDefense()	<< " " << playerCharacter.getBaseDefense()	 << " ";
+		fout << playerCharacter.getLevel()		<< " " << playerCharacter.getExperience()	 << " ";
+		fout << playerCharacter.getCoins();
+
+		// Close the file
+		fout.close();
+
+		cout << "\nGame saved successfully.\n";
+	}
+	else
+	{
+		cout << "\nUnable to open the file for saving.\n";
+	}
+}
+
 void LoadGame(Character& playerCharacter, const string& filename)
 {
 	ifstream fin(filename);
@@ -105,11 +131,11 @@ void LoadGame(Character& playerCharacter, const string& filename)
 		playerCharacter.setCoins(coins);
 
 		fin.close();
-		cout << "Game loaded successfully.\n";
+		cout << "\nGame loaded successfully.\n";
 	}
 	else
 	{
-		cout << "Unable to open the file for loading.\n";
+		cout << "\nUnable to open the file for loading.\n";
 	}
 }
 
