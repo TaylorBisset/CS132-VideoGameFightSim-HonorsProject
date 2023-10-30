@@ -24,7 +24,7 @@ using namespace std;
 int main()
 {
 	cout << endl;
-	cout << "Welcome to the Armamentarium!\n";
+	cout << "Welcome to the Armamentarium!\n\n";
 	cout << "What would you like to do?\n";
 	cout << "1  New Game\n";
 	cout << "2  Load Game\n";
@@ -44,8 +44,11 @@ int main()
 			cout << "What is your name, warrior?\n";
 			cin >> name;
 			cin.ignore();
-			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0);
-
+			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0, 0);
+			cout << endl;
+			cout << "Welcome, " << name << "!\n";
+			cout << "I hope you find your experience here... entertaining.\n";
+			cout << "Here's 10 coins to gear up with.\n";
 			break;
 		case 2:
 			cout << endl;

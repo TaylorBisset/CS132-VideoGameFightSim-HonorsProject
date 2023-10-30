@@ -11,25 +11,25 @@ This class is the main character class from which all characters will inherit.
 class Character : public Entity
 {
 public:
-	Character() 
-		: 
+	Character()
+		:
 		Entity("DefaultName", "DefaultDescription"),
 		maxHealth(10), currentHealth(10),
 		attack(2), baseAttack(2),
 		defense(2), baseDefense(2),
-		level(1), experience(0) {}
+		level(1), experience(0), coins(0) {}
 
 	Character(const string& name, const string& description,
 		int maxHealth, int currentHealth,
 		int attack, int baseAttack,
 		int defense, int baseDefense,
-		int level, int experience)
+		int level, int experience, int coins)
 		:
 		Entity(name, description),
 		maxHealth(maxHealth), currentHealth(currentHealth),
 		attack(attack), baseAttack(baseAttack),
 		defense(defense), baseDefense(baseDefense),
-		level(level), experience(experience)
+		level(level), experience(experience), coins(coins)
 	{
 		// Character properties
 	}
@@ -126,6 +126,16 @@ public:
 		return experience;
 	}
 
+	// Coins
+	void setCoins(int newCoins)
+	{
+		coins = newCoins;
+	}
+	int getCoins() const
+	{
+		return coins;
+	}
+
 private:
 	int maxHealth;
 	int currentHealth;
@@ -135,6 +145,7 @@ private:
 	int baseDefense;
 	int level;
 	int experience;
+	int coins;
 };
 
 #endif // CHARACTER_HPP
