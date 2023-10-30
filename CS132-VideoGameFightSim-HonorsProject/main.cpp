@@ -23,64 +23,8 @@ using namespace std;
 
 int main()
 {
-	cout << endl;
-	cout << "Welcome to the Armamentarium!\n\n";
-	cout << "What would you like to do?\n";
-	cout << "1  New Game\n";
-	cout << "2  Load Game\n";
-	cout << "3  Leave Game\n";
-	cout << endl;
-
-	int choice;
-	Character playerCharacter;
-	string name;
-	while (true)
-	{
-		cin >> choice;
-		switch (choice)
-		{
-		case 1:
-			cout << endl;
-			cout << "What is your name, warrior?\n";
-			cin >> name;
-			cin.ignore();
-			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0, 0);
-			cout << endl;
-			cout << "Welcome, " << name << "!\n";
-			sleep(1);
-
-			cout << "I hope you find your experience here to be";
-			sleep(2); cout << "."; sleep(1); cout << "."; sleep(1); 
-			cout << "."; sleep(1); cout << " entertaining.\n";
-			sleep(2);
-
-			cout << "Here's 10 coins to gear up with.\n";
-			sleep(1);
-			playerCharacter.modifyCoins(10);
-			sleep(2);
-			PrintPlayerStats(playerCharacter);
-			sleep(2);
-			// Initiate gameplay
-			break;
-		case 2:
-			cout << endl;
-			cout << "Loading game...\n";
-			sleep(1);
-
-			LoadGame(playerCharacter, "save_game.txt");
-			PrintPlayerStats(playerCharacter);
-			sleep(2);
-			// Initiate gameplay
-			break;
-		case 3:
-			QuitGame();
-			return 0;
-		default:
-			cout << endl;
-			cout << "Invalid choice.\nPlease select a valid option.\n\n";
-			break;
-		}
-	}
+	GameMenu();
+	return 0;
 }
 
 /*
