@@ -20,7 +20,8 @@ public:
 		maxHealth(10), currentHealth(10),
 		attack(1), baseAttack(1),
 		defense(1), baseDefense(1),
-		level(1), experience(0), coins(0) {}
+		level(1), experience(0), coins(0), 
+		equippedWeapon(nullptr), equippedArmor(nullptr) {}
 
 	Character(const string& name, const string& description,
 		int maxHealth, int currentHealth,
@@ -32,7 +33,8 @@ public:
 		maxHealth(maxHealth), currentHealth(currentHealth),
 		attack(attack), baseAttack(baseAttack),
 		defense(defense), baseDefense(baseDefense),
-		level(level), experience(experience), coins(coins)
+		level(level), experience(experience), coins(coins),
+		equippedWeapon(nullptr), equippedArmor(nullptr)
 	{
 		// Character properties
 	}
@@ -172,15 +174,15 @@ public:
 	}
 
 	// Equip items
-	void equipWeapon(const Weapon& weapon)
+	void equipWeapon(const Weapon* weapon)
 	{
 		equippedWeapon = weapon;
-		modifyAttack(weapon.getDamage());
+		modifyAttack(weapon->getDamage());
 	}
-	void equipArmor(const Armor& armor)
+	void equipArmor(const Armor* armor)
 	{
 		equippedArmor = armor;
-		modifyDefense(armor.getProtection());
+		modifyDefense(armor->getProtection());
 	}
 
 private:
@@ -194,8 +196,8 @@ private:
 	int experience;
 	int coins;
 
-	Weapon equippedWeapon;
-	Armor equippedArmor;
+	const Weapon* equippedWeapon;
+	const Armor* equippedArmor;
 };
 
 #endif // CHARACTER_HPP
