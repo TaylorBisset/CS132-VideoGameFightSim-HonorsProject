@@ -3,30 +3,41 @@
 
 Inventory::Inventory()
 {
-    // Initialize the inventory, if needed
+	// Initialize the inventory, if needed
 }
 
 void Inventory::addItem(const Item& item)
 {
-    items.push_back(item);
+	items.push_back(item);
 }
 
 void Inventory::displayInventory()
 {
-    cout << "Inventory:" << endl;
-    for (const Item& item : items)
-    {
-        cout << item.getName() << endl;
-        cout << "\t" << item.getDescription() << endl;
-        cout << "\t\tValue: " << item.getValue() << " coins" << endl;
-        if (item.getType() == "Weapon")
-        {
-            cout << "\t\tDamage: " << Weapon::getDamage << endl;
-        }
-        if (item.getType() == "Armor")
-        {
-            cout << "\t\tProtection: " << Armor::getProtection << endl;
-        }
-        cout << endl;
-    }
+	cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
+	cout << "Inventory:" << endl;
+	for (const Item& item : items)
+	{
+		cout << item.getName() << endl;
+		cout << "\t" << item.getDescription() << endl;
+		cout << "\t\tValue: " << item.getValue() << " coins" << endl;
+
+		if (item.getType() == "Weapon")
+		{
+			const Weapon* weapon = dynamic_cast<const Weapon*>(&item);
+			if (weapon)
+			{
+				cout << "\t\tDamage: " << weapon->getDamage() << endl;
+			}
+		}
+
+		if (item.getType() == "Armor")
+		{
+			const Armor* armor = dynamic_cast<const Armor*>(&item);
+			if (armor)
+			{
+				cout << "\t\tProtection: " << armor->getProtection() << endl;
+			}
+		}
+		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
+	}
 }
