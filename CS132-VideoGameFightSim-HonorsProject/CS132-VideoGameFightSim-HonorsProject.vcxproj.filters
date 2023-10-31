@@ -80,6 +80,9 @@
     <ClInclude Include="inventory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="shop.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="save_game.txt">

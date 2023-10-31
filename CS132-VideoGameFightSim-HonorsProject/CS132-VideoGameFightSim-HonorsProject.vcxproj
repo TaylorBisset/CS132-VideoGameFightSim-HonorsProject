@@ -140,6 +140,7 @@
     <ClInclude Include="game_functions.hpp" />
     <ClInclude Include="inventory.hpp" />
     <ClInclude Include="item.hpp" />
+    <ClInclude Include="shop.hpp" />
     <ClInclude Include="weapon.hpp" />
   </ItemGroup>
   <ItemGroup>
