@@ -119,18 +119,17 @@ void GameMenu()
 	while (true)
 	{
 		cout << endl;
-		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-		cout << endl << endl;
-
-		cout << "Welcome to the Armamentarium!\n\n";
-		cout << "What would you like to do?\n";
-		cout << "1  New Game\n";
-		cout << "2  Load Game\n";
-		cout << "3  Leave Game\n";
-
-		cout << endl;
-		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-		cout << endl << endl;
+		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
+		cout << "\t|                               |\n";
+		cout << "\t| Welcome to the Armamentarium! |\n";
+		cout << "\t|                               |\n";
+		cout << "\t|   What would you like to do?  |\n";
+		cout << "\t|                               |\n";
+		cout << "\t|   1  New Game                 |\n";
+		cout << "\t|   2  Load Game                |\n";
+		cout << "\t|   3  Leave Game               |\n";
+		cout << "\t|                               |\n";
+		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
 		int choice;
 		string name;
