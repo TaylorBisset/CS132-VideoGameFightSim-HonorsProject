@@ -127,9 +127,9 @@ void GameMenu()
 		cout << endl;
 		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
 		cout << "\t|                               |\n";
-		cout << "\t| Welcome to the Armamentarium! |\n";
+		cout << "\t| \033[1mWelcome to the Armamentarium!\033[0m |\n";
 		cout << "\t|                               |\n";
-		cout << "\t|   What would you like to do?  |\n";
+		cout << "\t|   \033[1;6mWhat would you like to do?\033[0m  |\n";
 		cout << "\t|                               |\n";
 		cout << "\t|   1  New Game                 |\n";
 		cout << "\t|   2  Load Game                |\n";
@@ -183,16 +183,17 @@ void IdleMenu(Character& playerCharacter)
 		cout << "\n\tWelcome back, " << playerCharacter.getName() << endl << endl;
 		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
 		cout << "\t|                           |\n";
-		cout << "\t|        Entering the       |\n";
-		cout << "\t|       Armamentarium!      |\n";
+		cout << "\t|        \033[1mEntering the\033[0m       |\n";
+		cout << "\t|       \033[1mArmamentarium!\033[0m      |\n";
 		cout << "\t|                           |\n";
-		cout << "\t|      Make your choice     |\n";
+		cout << "\t|      \033[1;6mMake your choice\033[0m     |\n";
 		cout << "\t|                           |\n";
 		cout << "\t|  1  Fight next opponent   |\n";
 		cout << "\t|  2  View stats            |\n";
-		cout << "\t|  3  Buy gear              |\n";
-		cout << "\t|  4  Save game             |\n";
-		cout << "\t|  5  Exit the game         |\n";
+		cout << "\t|  3  Equip gear            |\n";
+		cout << "\t|  4  Buy gear              |\n";
+		cout << "\t|  5  Save game             |\n";
+		cout << "\t|  6  Exit the game         |\n";
 		cout << "\t|                           |\n";
 		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n\t";
 
@@ -209,13 +210,16 @@ void IdleMenu(Character& playerCharacter)
 			sleep(1);
 			break;
 		case 3:
-			// Implement the buy gear logic
+			// Implement the equip gear logic
 			break;
 		case 4:
+			// Implement the buy gear logic
+			break;
+		case 5:
 			SaveGame(playerCharacter, "save_game.txt");
 			sleep(1);
 			break;
-		case 5:
+		case 6:
 			cout << "\nExiting the game.\n";
 			QuitGame();
 			return;

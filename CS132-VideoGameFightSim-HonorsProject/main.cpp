@@ -10,9 +10,7 @@
 Repo:           https://github.com/TaylorBisset/CS132-VideoGameFightSim-HonorsProject
 */
 
-/*
-main.cpp
-*/
+// main.cpp
 
 #include <iostream>
 
