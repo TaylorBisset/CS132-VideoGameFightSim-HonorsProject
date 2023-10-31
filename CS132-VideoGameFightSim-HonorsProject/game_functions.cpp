@@ -28,6 +28,9 @@ void QuitGame()
 
 void SaveGame(const Character& playerCharacter, const string& filename)
 {
+	cout << "Saving game";
+	sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "."; sleep(1);
+
 	ofstream fout(filename);
 
 	if (fout.is_open())
@@ -59,6 +62,9 @@ void LoadGame(Character& playerCharacter, const string& filename)
 	ifstream fin(filename);
 	if (fin.is_open())
 	{
+		cout << "Loading game";
+		sleep(1); cout << "."; sleep(1); cout << "."; sleep(1); cout << "."; sleep(1);
+
 		string name, description;
 		int maxHealth, currentHealth, attack, baseAttack;
 		int defense, baseDefense, level, experience, coins;
@@ -129,7 +135,7 @@ void GameMenu()
 		cout << "\t|   2  Load Game                |\n";
 		cout << "\t|   3  Leave Game               |\n";
 		cout << "\t|                               |\n";
-		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
+		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n\t";
 
 		int choice;
 		string name;
@@ -138,50 +144,33 @@ void GameMenu()
 		switch (choice)
 		{
 		case 1:
-			cout << endl;
-			cout << "What is your name, warrior?\n";
+			cout << "\n\tWhat is your name, warrior?\n\t";
 			cin >> name;
 			cin.ignore();
 			playerCharacter = Character(name, "A capable warrior.", 10, 10, 1, 1, 1, 1, 1, 0, 0);
-			cout << endl;
-			cout << "Welcome, " << name << "!\n";
+			cout << "\n\tWelcome, " << name << "!\n";
 			sleep(1);
-
-			cout << "I hope you find your experience here to be";
+			cout << "\tI hope you find your experience here to be";
 			sleep(2); cout << "."; sleep(1); cout << "."; sleep(1);
-
 			cout << "."; sleep(1); cout << " entertaining.\n";
+			sleep(1);
+			cout << "\tHere's 10 coins to gear up with.\n";
 			sleep(2);
-
-			cout << "Here's 10 coins to gear up with.\n";
-			sleep(2);
-
 			playerCharacter.modifyCoins(10);
 			sleep(2);
-
-			PrintPlayerStats(playerCharacter);
-			sleep(2);
-
 			IdleMenu(playerCharacter);
 			break;
 		case 2:
-			cout << endl;
-			cout << "Loading game...\n";
-			sleep(1);
-
 			LoadGame(playerCharacter, "save_game.txt");
 			playerCharacter.modifyExperience(playerCharacter.getExperience());
-			PrintPlayerStats(playerCharacter);
-			sleep(2);
-
+			sleep(1);
 			IdleMenu(playerCharacter);
 			break;
 		case 3:
 			QuitGame();
 			return;
 		default:
-			cout << endl;
-			cout << "Invalid choice.\nPlease select a valid option.\n\n";
+			cout << "\nInvalid choice.\nPlease select a valid option.\n\n";
 			break;
 		}
 	}
@@ -191,15 +180,21 @@ void IdleMenu(Character& playerCharacter)
 {
 	while (true)
 	{
-		cout << "\nWelcome, " << playerCharacter.getName() << endl << endl;
-
-		cout << "Make your choice\n\n";
-
-		cout << "1  Fight your next opponent\n";
-		cout << "2  View stats\n";
-		cout << "3  Buy gear\n";
-		cout << "4  Save the game\n";
-		cout << "5  Exit the game\n";
+		cout << "\n\tWelcome back, " << playerCharacter.getName() << endl << endl;
+		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
+		cout << "\t|                           |\n";
+		cout << "\t|        Entering the       |\n";
+		cout << "\t|       Armamentarium!      |\n";
+		cout << "\t|                           |\n";
+		cout << "\t|      Make your choice     |\n";
+		cout << "\t|                           |\n";
+		cout << "\t|  1  Fight next opponent   |\n";
+		cout << "\t|  2  View stats            |\n";
+		cout << "\t|  3  Buy gear              |\n";
+		cout << "\t|  4  Save game             |\n";
+		cout << "\t|  5  Exit the game         |\n";
+		cout << "\t|                           |\n";
+		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n\t";
 
 		int choice;
 		cin >> choice;
@@ -210,7 +205,6 @@ void IdleMenu(Character& playerCharacter)
 			// Implement the fight logic
 			break;
 		case 2:
-			sleep(1);
 			PrintPlayerStats(playerCharacter);
 			sleep(1);
 			break;
@@ -218,17 +212,15 @@ void IdleMenu(Character& playerCharacter)
 			// Implement the buy gear logic
 			break;
 		case 4:
-			sleep(1);
 			SaveGame(playerCharacter, "save_game.txt");
 			sleep(1);
 			break;
 		case 5:
-			sleep(1);
-			sleep(1);
+			cout << "\nExiting the game.\n";
 			QuitGame();
 			return;
 		default:
-			cout << "Invalid choice.\nPlease select a valid option.\n\n";
+			cout << "\nInvalid choice.\nPlease select a valid option.\n\n";
 			break;
 		}
 	}
