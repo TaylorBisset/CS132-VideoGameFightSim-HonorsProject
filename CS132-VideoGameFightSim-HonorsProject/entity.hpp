@@ -7,6 +7,7 @@ This class is the base entity from which all objects will inherit.
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
 
+#include <iostream>
 #include <string>
 
 using namespace std;
