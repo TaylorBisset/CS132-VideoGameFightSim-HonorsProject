@@ -32,6 +32,12 @@ public:
 		return damage;
 	}
 
+	void displayDetails() const override
+	{
+		Item::displayDetails();
+		cout << "\t\tDamage: " << getDamage() << endl;
+	}
+
 private:
 	int damage;
 };
