@@ -13,6 +13,7 @@ void sleep(int seconds)
 
 void QuitGame()
 {
+	cout << "\nThank you for playing!\nCome back soon!\n\n";
 	// OS independent program termination sequence. 
 #ifdef _WIN32
 	cout << endl;
@@ -142,7 +143,7 @@ void GameMenu()
 			cout << "What is your name, warrior?\n";
 			cin >> name;
 			cin.ignore();
-			playerCharacter = Character(name, "A capable warrior.", 10, 10, 2, 2, 2, 2, 1, 0, 0);
+			playerCharacter = Character(name, "A capable warrior.", 10, 10, 1, 1, 1, 1, 1, 0, 0);
 			cout << endl;
 			cout << "Welcome, " << name << "!\n";
 			sleep(1);
@@ -154,7 +155,7 @@ void GameMenu()
 			sleep(2);
 
 			cout << "Here's 10 coins to gear up with.\n";
-			sleep(1);
+			sleep(2);
 
 			playerCharacter.modifyCoins(10);
 			sleep(2);
@@ -170,6 +171,7 @@ void GameMenu()
 			sleep(1);
 
 			LoadGame(playerCharacter, "save_game.txt");
+			playerCharacter.modifyExperience(playerCharacter.getExperience());
 			PrintPlayerStats(playerCharacter);
 			sleep(2);
 
@@ -198,7 +200,7 @@ void IdleMenu(Character& playerCharacter)
 		cout << "2  View stats\n";
 		cout << "3  Buy gear\n";
 		cout << "4  Save the game\n";
-		cout << "5  Exit to Main Menu\n";
+		cout << "5  Exit the game\n";
 
 		int choice;
 		cin >> choice;
@@ -223,8 +225,8 @@ void IdleMenu(Character& playerCharacter)
 			break;
 		case 5:
 			sleep(1);
-			cout << "Returning to Main Menu.\n";
 			sleep(1);
+			QuitGame();
 			return;
 		default:
 			cout << "Invalid choice.\nPlease select a valid option.\n\n";

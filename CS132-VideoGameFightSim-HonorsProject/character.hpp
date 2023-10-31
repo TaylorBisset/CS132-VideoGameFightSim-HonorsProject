@@ -15,8 +15,8 @@ public:
 		:
 		Entity("DefaultName", "DefaultDescription"),
 		maxHealth(10), currentHealth(10),
-		attack(2), baseAttack(2),
-		defense(2), baseDefense(2),
+		attack(1), baseAttack(1),
+		defense(1), baseDefense(1),
 		level(1), experience(0), coins(0) {}
 
 	Character(const string& name, const string& description,
@@ -143,6 +143,8 @@ public:
 			cout << "Congratulations!\nYou are now level " << level << endl;
 			maxHealth = level * 10;
 			setMaxHealth(maxHealth);
+			setBaseAttack(level);
+			setBaseDefense(level);
 		}
 		setExperience(experience);
 	}
@@ -161,7 +163,7 @@ public:
 		coins += coinChange;
 		if (coinChange > 0)
 		{
-			cout << "You received " << coinChange << " coins.\n";
+			cout << "\nYou received " << coinChange << " coins.\n";
 		}
 		cout << "Current coin count: " << coins << endl;
 	}
