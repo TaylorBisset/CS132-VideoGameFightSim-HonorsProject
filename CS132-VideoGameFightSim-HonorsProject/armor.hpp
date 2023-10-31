@@ -11,6 +11,11 @@ This class is the main armor class from which all protection items will inherit.
 class Armor : public Item
 {
 public:
+	Armor()
+		:
+		Item("DefaultArmor", "DefaultDescription", "Armor", 0),
+		protection(0) {}
+
 	Armor(const string& name, const string& description,
 		const string& type, int value,
 		int protection)
