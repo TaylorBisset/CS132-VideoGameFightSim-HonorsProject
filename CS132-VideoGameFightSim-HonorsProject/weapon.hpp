@@ -35,7 +35,7 @@ public:
 	void displayDetails() const override
 	{
 		Item::displayDetails();
-		cout << "\t\tDamage: " << getDamage() << endl;
+		cout << "\t\t\033[31;3mDamage: " << getDamage() << "\033[0m" << endl;
 	}
 
 private:

@@ -35,7 +35,7 @@ public:
 	void displayDetails() const override
 	{
 		Item::displayDetails();
-		cout << "\t\tProtection: " << getProtection() << endl;
+		cout << "\t\t\033[32;3mProtection: " << getProtection() << "\033[0m" << endl;
 	}
 
 private:

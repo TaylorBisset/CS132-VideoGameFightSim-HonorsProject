@@ -44,7 +44,7 @@ public:
 	{
 		cout << getName() << endl;
 		cout << "\t" << getDescription() << endl;
-		cout << "\t\tValue: " << getValue() << " coins" << endl;
+		cout << "\t\t\033[33mValue: " << getValue() << " coins\033[0m" << endl;
 	}
 
 private:
