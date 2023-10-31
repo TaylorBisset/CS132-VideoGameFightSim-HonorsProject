@@ -40,6 +40,13 @@ public:
 		return value;
 	}
 
+	virtual void displayDetails() const
+	{
+		cout << getName() << endl;
+		cout << "\t" << getDescription() << endl;
+		cout << "\t\tValue: " << getValue() << " coins" << endl;
+	}
+
 private:
 	string type; // armor, weapon
 	int	value;
