@@ -11,11 +11,16 @@ This class is the main weapon class from which all protection items will inherit
 class Weapon : public Item
 {
 public:
+	Weapon()
+		: 
+		Item("DefaultWeapon", "DefaultDescription", "Weapon", 0),
+		damage(0) {}
+
 	Weapon(const string& name, const string& description,
 		const string& type, int value,
 		int damage)
 		:
-		Item(name, description, 
+		Item(name, description,
 			type, value),
 		damage(damage)
 	{
