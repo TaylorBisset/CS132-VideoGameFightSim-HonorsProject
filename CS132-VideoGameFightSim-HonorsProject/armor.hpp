@@ -32,6 +32,12 @@ public:
 		return protection;
 	}
 
+	void displayDetails() const override
+	{
+		Item::displayDetails();
+		cout << "\t\tProtection: " << getProtection() << endl;
+	}
+
 private:
 	int protection;
 };
