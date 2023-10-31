@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="armor.cpp" />
     <ClCompile Include="game_functions.cpp" />
+    <ClCompile Include="inventory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="weapon.cpp" />
   </ItemGroup>

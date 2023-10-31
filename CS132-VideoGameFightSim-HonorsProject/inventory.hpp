@@ -5,6 +5,7 @@
 
 using namespace std;
 
+#include <iostream>
 #include <vector>
 
 #include "item.hpp"  // Include the item class
