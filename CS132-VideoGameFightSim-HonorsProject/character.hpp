@@ -7,6 +7,9 @@ This class is the main character class from which all characters will inherit.
 #define CHARACTER_HPP
 
 #include "entity.hpp"
+#include "item.hpp"
+#include "weapon.hpp"
+#include "armor.hpp"
 
 class Character : public Entity
 {
@@ -168,6 +171,18 @@ public:
 		cout << "Current coin count: " << coins << endl;
 	}
 
+	// Equip items
+	void equipWeapon(const Weapon& weapon)
+	{
+		equippedWeapon = weapon;
+		modifyAttack(weapon.getDamage());
+	}
+	void equipArmor(const Armor& armor)
+	{
+		equippedArmor = armor;
+		modifyDefense(armor.getProtection());
+	}
+
 private:
 	int maxHealth;
 	int currentHealth;
@@ -178,6 +193,9 @@ private:
 	int level;
 	int experience;
 	int coins;
+
+	Weapon equippedWeapon;
+	Armor equippedArmor;
 };
 
 #endif // CHARACTER_HPP
