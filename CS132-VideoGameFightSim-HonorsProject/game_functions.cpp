@@ -5,6 +5,7 @@
 #include <thread>
 
 #include "game_functions.hpp"
+#include "shop.hpp"
 
 void sleep(int seconds)
 {
@@ -213,7 +214,7 @@ void IdleMenu(Character& playerCharacter)
 			// Implement the equip gear logic
 			break;
 		case 4:
-			// Implement the buy gear logic
+			Shop::enter(playerCharacter);
 			break;
 		case 5:
 			SaveGame(playerCharacter, "save_game.txt");
