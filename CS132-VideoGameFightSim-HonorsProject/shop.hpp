@@ -11,12 +11,12 @@ using namespace std;
 class Shop
 {
 public:
-	Shop(Inventory& ShopInventory);
+	Shop(Inventory& shopInventory);
 
 	void enter(Character& playerCharacter);
 
 private:
-	Inventory& ShopInventory;
+	Inventory& shopInventory;
 };
 
 #endif // !SHOP_HPP
