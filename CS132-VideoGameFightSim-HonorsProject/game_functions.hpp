@@ -8,6 +8,7 @@
 using namespace std;
 
 #include "character.hpp"
+#include "shop.hpp"
 
 void sleep(int seconds);
 void QuitGame();

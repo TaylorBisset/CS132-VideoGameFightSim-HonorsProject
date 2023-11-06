@@ -2,7 +2,22 @@
 
 #include "shop.hpp"
 
-Shop::Shop(Inventory& shopInventory) : shopInventory(shopInventory) {}
+Shop::Shop(Inventory& shopInventory) 
+    : 
+    shopInventory(shopInventory) {}
+
+void Shop::initializeShopInventory()
+{
+    shopInventory.addItem(ClothArmor);
+    shopInventory.addItem(LeatherArmor);
+    shopInventory.addItem(IronArmor);
+    shopInventory.addItem(Dagger);
+    shopInventory.addItem(IronSword);
+    shopInventory.addItem(SteelSword);
+    shopInventory.addItem(Sling);
+    shopInventory.addItem(ShortBow);
+    shopInventory.addItem(LongBow);
+}
 
 void Shop::enter(Character& player)
 {
@@ -25,15 +40,15 @@ void Shop::enter(Character& player)
         case 1:
             // display armor
             // switch to choose what to buy
-            // return to idlemenu
+            // return to idle menu
             break;
         case 2:
             // display weapons
             // switch to choose what to buy
-            // return to idlemenu
+            // return to idle menu
             break;
         case 3:
-            // return to idlemenu
+            // return to idle menu
             break;
         default:
             // handle invalid input

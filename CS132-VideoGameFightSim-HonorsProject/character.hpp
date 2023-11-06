@@ -10,6 +10,9 @@ This class is the main character class from which all characters will inherit.
 #include "item.hpp"
 #include "weapon.hpp"
 #include "armor.hpp"
+#include "inventory.hpp"
+
+class Inventory;
 
 class Character : public Entity
 {
@@ -21,7 +24,7 @@ public:
 		attack(1), baseAttack(1),
 		defense(1), baseDefense(1),
 		level(1), experience(0), coins(0), 
-		equippedWeapon(nullptr), equippedArmor(nullptr) {}
+		equippedWeapon(nullptr), equippedArmor(nullptr), inventory() {}
 
 	Character(const string& name, const string& description,
 		int maxHealth, int currentHealth,
@@ -34,7 +37,7 @@ public:
 		attack(attack), baseAttack(baseAttack),
 		defense(defense), baseDefense(baseDefense),
 		level(level), experience(experience), coins(coins),
-		equippedWeapon(nullptr), equippedArmor(nullptr)
+		equippedWeapon(nullptr), equippedArmor(nullptr), inventory()
 	{
 		// Character properties
 	}
@@ -173,6 +176,16 @@ public:
 		cout << "Current coin count: " << coins << endl;
 	}
 
+	// Inventory
+	void setInventory(const Inventory& newInventory)
+	{
+		inventory = newInventory;
+	}
+	Inventory& getInventory()
+	{
+		return inventory;
+	}
+
 	// Equip items
 	void equipWeapon(const Weapon* weapon)
 	{
@@ -195,6 +208,8 @@ private:
 	int level;
 	int experience;
 	int coins;
+
+	Inventory inventory;
 
 	const Weapon* equippedWeapon;
 	const Armor* equippedArmor;

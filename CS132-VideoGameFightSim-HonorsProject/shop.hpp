@@ -12,11 +12,20 @@ class Shop
 {
 public:
 	Shop(Inventory& shopInventory);
-
+	void initializeShopInventory();
 	void enter(Character& playerCharacter);
 
 private:
 	Inventory& shopInventory;
+	Armor ClothArmor;
+	Armor LeatherArmor;
+	Armor IronArmor;
+	Weapon Dagger;
+	Weapon IronSword;
+	Weapon SteelSword;
+	Weapon Sling;
+	Weapon ShortBow;
+	Weapon LongBow;
 };
 
 #endif // !SHOP_HPP

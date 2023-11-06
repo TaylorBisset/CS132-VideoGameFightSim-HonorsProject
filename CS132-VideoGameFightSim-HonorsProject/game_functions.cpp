@@ -5,7 +5,6 @@
 #include <thread>
 
 #include "game_functions.hpp"
-#include "shop.hpp"
 
 void sleep(int seconds)
 {
@@ -179,6 +178,8 @@ void GameMenu()
 
 void IdleMenu(Character& playerCharacter)
 {
+	Shop shop(playerCharacter.getInventory());
+
 	while (true)
 	{
 		cout << "\n\tWelcome back, " << playerCharacter.getName() << endl << endl;
@@ -214,7 +215,7 @@ void IdleMenu(Character& playerCharacter)
 			// Implement the equip gear logic
 			break;
 		case 4:
-			Shop::enter(playerCharacter);
+			shop.enter(playerCharacter);
 			break;
 		case 5:
 			SaveGame(playerCharacter, "save_game.txt");

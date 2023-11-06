@@ -8,9 +8,9 @@ using namespace std;
 #include <iostream>
 #include <vector>
 
-#include "item.hpp"  // Include the item class
-#include "weapon.hpp" // Include the weapon class
-#include "armor.hpp"  // Include the armor class
+#include "item.hpp"
+#include "weapon.hpp"
+#include "armor.hpp"
 
 class Inventory
 {
