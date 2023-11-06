@@ -49,7 +49,7 @@ void Shop::enter(Character& player)
             break;
         case 3:
             // return to idle menu
-            break;
+            return;
         default:
             // handle invalid input
             break;
