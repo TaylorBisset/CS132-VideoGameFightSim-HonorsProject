@@ -43,15 +43,15 @@ void SaveGame(const Character& playerCharacter, const string& filename)
 	if (fout.is_open())
 	{
 		fout << playerCharacter.getName() << endl << playerCharacter.getDescription() << endl;
-		
+
 		fout << playerCharacter.getLevel() << endl << playerCharacter.getExperience() << endl;
 		fout << playerCharacter.getCoins() << endl;
-		
+
 		fout << playerCharacter.getMaxHealth() << endl << playerCharacter.getCurrentHealth() << endl;
-		
+
 		fout << playerCharacter.getAttack() << endl << playerCharacter.getBaseAttack() << endl;
 		fout << playerCharacter.getDefense() << endl << playerCharacter.getBaseDefense() << endl;
-		
+
 
 		fout.close();
 
@@ -101,7 +101,6 @@ void LoadGame(Character& playerCharacter, const string& filename)
 	{
 		cout << "\nUnable to open the file for loading.\n";
 	}
-	sleep(1);
 }
 
 void PrintPlayerStats(const Character& playerCharacter)
@@ -120,7 +119,7 @@ void PrintPlayerStats(const Character& playerCharacter)
 	cout << "Base Attack:    " << playerCharacter.getBaseAttack() << endl;
 	cout << "Defense:        " << playerCharacter.getDefense() << endl;
 	cout << "Base Defense:   " << playerCharacter.getBaseDefense() << endl;
-	
+
 	cout << endl;
 	sleep(1);
 }
@@ -139,7 +138,7 @@ void GameMenu()
 			cout << vl;
 		}
 		cout << ur << endl;
-		
+
 		cout << "\t" << hl << "                               " << hl << "\n";
 		cout << "\t" << hl << " \033[1mWelcome to the Armamentarium!\033[0m " << hl << "\n";
 		cout << "\t" << hl << "                               " << hl << "\n";
@@ -156,7 +155,7 @@ void GameMenu()
 		{
 			cout << vl;
 		}
-		cout << lr << endl << "\t";
+		cout << lr << endl << endl << "\t";
 
 		int choice;
 		string name;
@@ -204,21 +203,35 @@ void IdleMenu(Character& playerCharacter)
 	while (true)
 	{
 		cout << "\n\tWelcome back, " << playerCharacter.getName() << endl << endl;
-		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
-		cout << "\t|                           |\n";
-		cout << "\t|        \033[1mEntering the\033[0m       |\n";
-		cout << "\t|       \033[1mArmamentarium!\033[0m      |\n";
-		cout << "\t|                           |\n";
-		cout << "\t|      \033[1;6mMake your choice\033[0m     |\n";
-		cout << "\t|                           |\n";
-		cout << "\t|  1  Fight next opponent   |\n";
-		cout << "\t|  2  View stats            |\n";
-		cout << "\t|  3  Equip gear            |\n";
-		cout << "\t|  4  Buy gear              |\n";
-		cout << "\t|  5  Save game             |\n";
-		cout << "\t|  6  Exit the game         |\n";
-		cout << "\t|                           |\n";
-		cout << "\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n\t";
+		// idle menu top line
+		cout << "\t" << ul;
+		for (int i = 0; i < 27; i++)
+		{
+			cout << vl;
+		}
+		cout << ur << endl;
+
+		cout << "\t" << hl << "                           " << hl << "\n";
+		cout << "\t" << hl << "        \033[1mEntering the\033[0m       " << hl << "\n";
+		cout << "\t" << hl << "       \033[1mArmamentarium!\033[0m      " << hl << "\n";
+		cout << "\t" << hl << "                           " << hl << "\n";
+		cout << "\t" << hl << "      \033[1;6mMake your choice\033[0m     " << hl << "\n";
+		cout << "\t" << hl << "                           " << hl << "\n";
+		cout << "\t" << hl << "  1  Fight next opponent   " << hl << "\n";
+		cout << "\t" << hl << "  2  View stats            " << hl << "\n";
+		cout << "\t" << hl << "  3  Equip gear            " << hl << "\n";
+		cout << "\t" << hl << "  4  Buy gear              " << hl << "\n";
+		cout << "\t" << hl << "  5  Save game             " << hl << "\n";
+		cout << "\t" << hl << "  6  Exit the game         " << hl << "\n";
+		cout << "\t" << hl << "                           " << hl << "\n";
+
+		// idle menu end line
+		cout << "\t" << ll;
+		for (int i = 0; i < 27; i++)
+		{
+			cout << vl;
+		}
+		cout << lr << endl << endl << "\t";
 
 		int choice;
 		cin >> choice;
