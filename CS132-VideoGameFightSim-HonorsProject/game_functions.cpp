@@ -212,6 +212,7 @@ void IdleMenu(Character& playerCharacter)
 			sleep(1);
 			break;
 		case 3:
+			playerCharacter.getInventory().displayInventory();
 			// Implement the equip gear logic
 			break;
 		case 4:

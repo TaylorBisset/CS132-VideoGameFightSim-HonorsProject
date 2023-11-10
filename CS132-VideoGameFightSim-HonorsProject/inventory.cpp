@@ -13,11 +13,12 @@ void Inventory::addItem(const Item& item)
 
 void Inventory::displayInventory()
 {
-	cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
+	cout << "\033[1m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\033[0m" << endl;
 	cout << "Inventory:" << endl;
 	for (const Item& item : items)
 	{
+		cout << "\033[2m-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-\033[0m" << endl;
 		item.displayDetails();
-		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
 	}
+	cout << "\033[1m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\033[0m" << endl << endl;
 }
