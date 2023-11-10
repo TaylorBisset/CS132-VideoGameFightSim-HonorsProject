@@ -19,6 +19,10 @@ public:
 
 	void addItem(const Item& item);
 	void displayInventory();
+	bool isEmpty() const
+	{
+		return items.empty();
+	}
 
 private:
 	vector<Item> items;

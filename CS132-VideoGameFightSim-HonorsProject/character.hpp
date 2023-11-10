@@ -37,7 +37,7 @@ public:
 		attack(attack), baseAttack(baseAttack),
 		defense(defense), baseDefense(baseDefense),
 		level(level), experience(experience), coins(coins),
-		equippedWeapon(nullptr), equippedArmor(nullptr), inventory()
+		equippedWeapon(nullptr), equippedArmor(nullptr) 
 	{
 		// Character properties
 	}
@@ -184,6 +184,16 @@ public:
 	Inventory& getInventory()
 	{
 		return inventory;
+	}
+	void displayCharacterInventory()
+	{
+		if (inventory.isEmpty()) 
+		{
+			cout << "Inventory is empty.\n";
+		}
+		else {
+			inventory.displayInventory();
+		}
 	}
 
 	// Equip items

@@ -171,7 +171,7 @@ void GameMenu()
 			cout << "\n\tWelcome, " << name << "!\n";
 			sleep(1);
 			cout << "\tI hope you find your experience here to be";
-			sleep(2); cout << "."; sleep(1); cout << "."; sleep(1);
+			sleep(1); cout << "."; sleep(1); cout << "."; sleep(1);
 			cout << "."; sleep(1); cout << " entertaining.\n";
 			sleep(1);
 			cout << "\tHere's 10 coins to gear up with.\n";
@@ -246,7 +246,7 @@ void IdleMenu(Character& playerCharacter)
 			sleep(1);
 			break;
 		case 3:
-			playerCharacter.getInventory().displayInventory();
+			playerCharacter.displayCharacterInventory();
 			// Implement the equip gear logic
 			break;
 		case 4:

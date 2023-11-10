@@ -4,27 +4,21 @@
 
 Shop::Shop(Inventory& shopInventory) 
     : 
-    shopInventory(shopInventory) {}
+    shopInventory(shopInventory) 
+{
+    initializeShopInventory();
+}
 
 void Shop::initializeShopInventory()
 {
-    Armor ClothArmor("Cloth Armor", "Cloth rags.", "Armor", 10, 5);
-    Armor LeatherArmor("Leather Armor", "Protective leather.", "Armor", 20, 10);
-    Armor IronArmor("Iron Armor", "Iron Plate Armor.", "Armor", 40, 20);
     shopInventory.addItem(ClothArmor);
     shopInventory.addItem(LeatherArmor);
     shopInventory.addItem(IronArmor);
 
-    Weapon Dagger("Dagger", "Short Iron Blade.", "Weapon", 10, 5);
-    Weapon IronSword("Iron Sword", "Sharp Iron Sword.", "Weapon", 20, 10);
-    Weapon SteelSword("Steel Sword", "Long Steel Sword.", "Weapon", 40, 20);
     shopInventory.addItem(Dagger);
     shopInventory.addItem(IronSword);
     shopInventory.addItem(SteelSword);
-
-    Weapon Sling("Sling", "Leather Sling.", "Weapon", 10, 5);
-    Weapon ShortBow("Short Bow", "Compact Short Bow.", "Weapon", 20, 10);
-    Weapon LongBow("Long Bow", "Large Long Bow.", "Weapon", 40, 20);
+   
     shopInventory.addItem(Sling);
     shopInventory.addItem(ShortBow);
     shopInventory.addItem(LongBow);
@@ -34,7 +28,6 @@ void Shop::enter(Character& player)
 {
     while (true)
     {
-        initializeShopInventory();
         shopInventory.displayInventory();
         player.getInventory();
         cout << "\tWelcome to the shop!\n\n";
@@ -43,7 +36,7 @@ void Shop::enter(Character& player)
         cout << "\t1  Buy Armor\n";
         cout << "\t2  Buy Melee Weapon\n";
         cout << "\t3  Buy Ranged Weapon\n";
-        cout << "\t3  Exit the Shop\n\n";
+        cout << "\t4  Exit the Shop\n\n";
 
         int choice;
         int buyChoice;
@@ -63,7 +56,7 @@ void Shop::enter(Character& player)
             switch (buyChoice)
             {
             case 1:
-                player.getInventory().addItem(ClothArmor);
+                player.getInventory().addItem(Armor("Cloth Armor", "Cloth rags.", "Armor", 10, 5));
                 return;
             case 2: 
                 player.getInventory().addItem(LeatherArmor);
